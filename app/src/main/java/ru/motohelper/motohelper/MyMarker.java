@@ -15,8 +15,13 @@ public class MyMarker {
 
     private String shortDescription;
     private String description;
-    private String phone;
     private String userLogin;
+
+    //Fields from User
+
+    private String userName;
+    private String userSecondName;
+    private String phone;
 
     private boolean visibility;
     /**
@@ -70,9 +75,25 @@ public class MyMarker {
         this.phone = phone;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-    public String getUserLogin(){
+    public void setUserSecondName(String userSecondName) {
+        this.userSecondName = userSecondName;
+    }
+
+
+    public String getUserLogin() {
         return this.userLogin;
+    }
+
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public String getUserSecondName() {
+        return this.userSecondName;
     }
 
     public String getPhone() {
