@@ -9,8 +9,14 @@ public class ServerUtilityGetMarkers extends AsyncTask <Void, Void, ArrayList<My
     private Context c;
     private ArrayList<MyMarker> markersFromServer;
 
+    private boolean doDialog;
+
     public ServerUtilityGetMarkers(Context c){
         this.c = c;
+    }
+
+    public void setDoDialog(boolean d){
+        this.doDialog=d;
     }
 
     @Override
