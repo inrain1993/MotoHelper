@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MotoHelper</string>
+    <string name="All">All</string>
+    <string name="Auth">Authorization</string>
+    <string name="ButtonEnterText">Login</string>
+    <string name="Cancel">Cancel</string>
+    <string name="EnterYourName">Enter Your Name</string>
+    <string name="EnterYourSoName">Enter Your Second Name</string>
+    <string name="InstNotif">MotoHelper service is online!</string>
+    <string name="Mark">Give Feedback</string>
+    <string name="MarkerListenRad">Radius of marker listener in km.</string>
+    <string name="MarkerListenType">Show notifications if added marker type is</string>
+    <string name="MarkerWasAdded">New marker was added</string>
+    <string name="MarkerWasAddednearby">New marker was added nerby</string>
+    <string name="MyAppTitle">Moto Helper</string>
+    <string name="PasswordConfirm">Confirmation</string>
+    <string name="Save">Save</string>
+    <string name="SpecifyIP">Specify server IP</string>
+    <string name="SpecifyMarkerTypes">Specify type of markers</string>
+    <string name="StiIpCancel">Cancel</string>
+    <string name="LoggingIn">Logging in...</string>
+    <string name="Map">Map</string>
+    <string name="action_map">Map</string>
+    <string name="action_exit">Log off</string>
+    <string name="Settings">Настройки</string>
+    <string name="SocialNetworks">Социальные сети</string>
+    <string name="marker">Маркер</string>
+    <string name="processing">Выполнение</string>
+    <string name="marker_was_added">Маркер добавлен в базу данных</string>
+    <string name="PhoneToCall">Телефон для связи</string>
+</resources>
