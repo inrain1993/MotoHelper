@@ -1,11 +1,11 @@
 package ru.motohelper.motohelper;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import android.app.Dialog;
-import android.os.Bundle;
+import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,8 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.net.Uri;
-
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -22,12 +24,11 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 
-import android.support.design.widget.NavigationView;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.RadioButton;
-import android.widget.Toast;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import ru.motohelper.motohelper.Fragments.FragmentSettings;
 
 
 public class MapActivity extends AppCompatActivity implements View.OnClickListener, OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener {
@@ -39,6 +40,8 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
     EditText markerShortDescription;
     EditText markerLongDescription;
     EditText markerUserPhone;
+
+    FragmentSettings fragmentSettings;
 
     TextView navUserLogin;
     TextView navUserFamNam;
@@ -73,6 +76,9 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
 
     User currentUser;
 
+    ServerUtilityGetMarkers getMarkers;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +87,8 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
         appSettings = new SettingsHolder(this);
         currentUser = appSettings.getCurrentUser();
         prepareToolbar();
+        fragmentSettings = new FragmentSettings();
+
 
 
     }
@@ -135,6 +143,22 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
 
         // эта строка всегда последняя!
         mMap = map;
+
+
+        getMarkers = new ServerUtilityGetMarkers(this);
+        getMarkers.setDoDialog(true);
+        ArrayList<MyMarker> markers;
+        markers = new ArrayList<>();
+        try {
+            markers = getMarkers.execute().get();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        for (int i=0;i<markers.size();i++){
+            markers.get(i).addMarker(mMap);
+            markersCollection.put(markers.get(i).getMarker().getId(),markers.get(i));
+        }
 
     }
 
@@ -291,10 +315,13 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+
         switch (item.getItemId()) {
             case R.id.nav_map:
                 break;
             case R.id.nav_settings:
+                fragmentTransaction.replace(R.id.content_main,fragmentSettings);
                 break;
             case R.id.nav_filtering:
                 break;
@@ -303,6 +330,7 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
             case R.id.nav_youtube:
                 break;
         }
+        fragmentTransaction.commit();
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
