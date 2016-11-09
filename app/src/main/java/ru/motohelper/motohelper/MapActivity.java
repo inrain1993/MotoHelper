@@ -31,7 +31,7 @@ import java.util.Map;
 import ru.motohelper.motohelper.Fragments.FragmentSettings;
 
 
-public class MapActivity extends AppCompatActivity implements View.OnClickListener, OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener {
+public class MapActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener,OnMapReadyCallback {
 
     MapFragment mapFragment;
     GoogleMap mMap;
