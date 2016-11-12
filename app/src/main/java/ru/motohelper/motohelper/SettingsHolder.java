@@ -1,16 +1,13 @@
 package ru.motohelper.motohelper;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import java.lang.String;
-
 
 public class SettingsHolder {
-    Context context;
-    SharedPreferences sharedPreferences;
+    private Context context;
+    private SharedPreferences sharedPreferences;
     private String ipAddress;
     private final String ipAddressSettingName = "IP_ADDRESS";
 
@@ -29,6 +26,21 @@ public class SettingsHolder {
     private String userPhone;
     private final String userPhoneSettingName = "USER_PHONE";
 
+    private int allowAutoRefresh;
+    private final String getAllowAutoRefreshSettingName = "REFRESH_AUTO";
+
+    private boolean showZoomButton;
+    private final String getShowZoomButtonSettingName = "SHOW_ZOOM_BUTTON";
+
+    private boolean showMyLocationButton;
+    private final String getShowMyLocationButtonSettingName = "SHOW_MYLOCBUTTON";
+
+    private boolean showCompassButton;
+    private final String getShowCompassButtonSettingName ="SHOW_COMPASS";
+
+    private String refreshTimeOut;
+    private final String getRefreshTimeOutSettingName = "REFRESH_TIMEOUT";
+
 
 
     private User currentUser;
@@ -37,6 +49,65 @@ public class SettingsHolder {
         this.context = cntx;
         sharedPreferences = context.getSharedPreferences("", Context.MODE_PRIVATE);
 
+    }
+
+    public void setRefreshTimeOut(int timeout){
+        SharedPreferences.Editor ed = sharedPreferences.edit();
+        ed.putString(getRefreshTimeOutSettingName,Integer.toString(timeout));
+        ed.commit();
+    }
+
+    public String  getRefreshTimeout(){
+        String ii;
+        try {
+            ii = sharedPreferences.getString(getRefreshTimeOutSettingName,"");
+            return ii;
+        }catch (Exception e){
+            this.setRefreshTimeOut(0);
+        }
+
+     return "20";
+
+    }
+
+    public boolean getGetShowCompassButtonSetting() {
+        return sharedPreferences.getBoolean(getShowCompassButtonSettingName, false);
+    }
+
+    public boolean getGetShowMyLocationButtonSetting() {
+        return sharedPreferences.getBoolean(getShowMyLocationButtonSettingName, false);
+    }
+
+    public boolean getGetShowZoomButtonSetting() {
+        return sharedPreferences.getBoolean(getShowZoomButtonSettingName, false);
+    }
+
+    public boolean getGetAllowAutoRefreshSetting() {
+         return sharedPreferences.getBoolean(getAllowAutoRefreshSettingName, false);
+    }
+
+    public void setAllowAutoRefresh(boolean b){
+        SharedPreferences.Editor ed = sharedPreferences.edit();
+        ed.putBoolean(getAllowAutoRefreshSettingName,b);
+        ed.commit();
+    }
+
+    public void setShowZoomButton(boolean b){
+        SharedPreferences.Editor ed = sharedPreferences.edit();
+        ed.putBoolean(getShowZoomButtonSettingName,b);
+        ed.apply();
+    }
+
+    public void setShowMyLocationButton(boolean b){
+        SharedPreferences.Editor ed = sharedPreferences.edit();
+        ed.putBoolean(getShowMyLocationButtonSettingName,b);
+        ed.commit();
+    }
+
+    public void setShowCompassButton(boolean b){
+        SharedPreferences.Editor ed = sharedPreferences.edit();
+        ed.putBoolean(getShowCompassButtonSettingName,b);
+        ed.commit();
     }
 
     public void setIpAddress(String ipAddress) {

@@ -16,6 +16,7 @@ public class MyMarker {
     private String shortDescription;
     private String description;
     private String userLogin;
+    private String serverID;
 
     //Fields from User
 
@@ -46,12 +47,28 @@ public class MyMarker {
         setMarkerImage();
     }
 
+    public MyMarker(LatLng position, String shortDescription, String description, String phone, int type, boolean visibility, String userLogin, String serverID) {
+        this.position = position;
+        this.shortDescription = shortDescription;
+        this.description = description;
+        this.phone = phone;
+        this.type = type;
+        this.visibility = visibility;
+        this.userLogin = userLogin;
+        this.serverID = serverID;
+        setMarkerImage();
+    }
+
     public void setShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
     }
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setServerID(String i){
+        this.serverID = i;
     }
 
     public void setUserLogin(String userLogin) {
@@ -116,6 +133,10 @@ public class MyMarker {
         return this.position;
     }
 
+    public String getServerID(){
+        return this.serverID;
+    }
+
     public boolean getVisibility() {
         return visibility;
     }
@@ -142,5 +163,9 @@ public class MyMarker {
                 markerOptions = new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.lookfriends)).position(position);
                 break;
         }
+    }
+
+    public MarkerOptions getMarkerOptions() {
+        return markerOptions;
     }
 }

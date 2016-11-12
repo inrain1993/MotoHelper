@@ -1,11 +1,11 @@
 package ru.motohelper.motohelper;
 
 
-import android.*;
+
 import android.Manifest;
-import android.app.AlertDialog;
+
 import android.app.Dialog;
-import android.content.DialogInterface;
+
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -24,7 +24,6 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.concurrent.ExecutionException;
 
 public class StartActivity extends AppCompatActivity implements View.OnClickListener {
     Button btnLogin;

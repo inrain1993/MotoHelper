@@ -29,4 +29,7 @@
     <string name="processing">Выполнение</string>
     <string name="marker_was_added">Маркер добавлен в базу данных</string>
     <string name="PhoneToCall">Телефон для связи</string>
+    <string name="Submit">Применить</string>
+    <string name="Discard">Отмена</string>
+    <string name="Sec">сек.</string>
 </resources>

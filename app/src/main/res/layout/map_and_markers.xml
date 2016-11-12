@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    android:padding="15sp">
+
+    <RelativeLayout
+        android:id="@+id/markerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/TextViewMarkers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/MarkerSettings"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxAllowAutoRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextViewMarkers"
+            android:layout_margin="8dp"
+            android:text="@string/allowautorefresh"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:id="@+id/seekLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/checkBoxAllowAutoRefresh">
+
+            <SeekBar
+                android:id="@+id/seekBarMilSecs"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/milSecndsDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="TEXT" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TextViewMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekLayout"
+            android:layout_marginTop="40dp"
+            android:text="@string/MapSettings"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+        <RelativeLayout
+            android:id="@+id/checkboxlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextViewMap"
+            android:layout_margin="8sp">
+
+            <CheckBox
+                android:id="@+id/checkboxShowZoomBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/showZoomBtn"
+                android:textSize="17sp" />
+
+            <CheckBox
+                android:id="@+id/checkboxShowCompass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkboxShowZoomBtn"
+                android:text="@string/showCompass"
+                android:textSize="17sp" />
+
+            <CheckBox
+                android:id="@+id/checkboxShowMyLocationBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkboxShowCompass"
+                android:text="@string/showMyLocationBtn"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkboxlayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            >
+
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/button_submit_map_marker_settings"
+               android:background="@drawable/rounded_light_button"
+               android:text="@string/Submit"
+               android:layout_marginRight="25sp"
+               />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_discard_map_marker_settings"
+                android:background="@drawable/rounded_light_button"
+                android:text="@string/Discard"
+                android:layout_marginLeft="25sp"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

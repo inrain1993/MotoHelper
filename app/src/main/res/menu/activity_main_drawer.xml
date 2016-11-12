@@ -5,11 +5,11 @@
         <item
             android:id="@+id/nav_map"
             android:icon="@drawable/ic_vector_map"
-            android:title="@string/Map" />
+            android:title="@string/MapAndMarkers" />
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_vector_settings"
-            android:title="@string/Settings" />
+            android:title="@string/SettingsApp" />
         <item
             android:id="@+id/nav_filtering"
             android:icon="@drawable/ic_vector_filter"

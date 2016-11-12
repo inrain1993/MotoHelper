@@ -8,7 +8,7 @@
     <string name="btnAllowPushNotifications">Разрешить присылать уведомления</string>
     <string name="MarkerListenRad">Радиус прослушивания маркеров (км)</string>
     <string name="MarkerListenType">Показывать уведомление, если добавлен маркер типа:</string>
-    <string name="allowautorefresh">Разрешить автоматическое обновление данных</string>
+    <string name="allowautorefresh">Обновлять автоматически</string>
     <string name="app_enter">Войти</string>
     <string name="app_register">Регистрация</string>
     <string name="title_activity_main_menu">Moto Helper</string>
@@ -56,4 +56,7 @@
     <string name="processing">Выполнение</string>
     <string name="marker_was_added">Маркер добавлен в базу данных</string>
     <string name="PhoneToCall">Телефон для связи</string>
+    <string name="Submit">Применить</string>
+    <string name="Discard">Отмена</string>
+    <string name="Sec">сек.</string>
 </resources>

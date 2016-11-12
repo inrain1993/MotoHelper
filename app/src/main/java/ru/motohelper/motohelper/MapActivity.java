@@ -5,6 +5,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -17,6 +18,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.CheckBox;
+import android.widget.SeekBar;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -27,14 +30,21 @@ import com.google.android.gms.maps.model.Marker;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.ExecutionException;
 
 import ru.motohelper.motohelper.Fragments.FragmentSettings;
 
+import static android.R.attr.x;
 
-public class MapActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener,OnMapReadyCallback {
+
+public class MapActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener, OnMapReadyCallback, ServerUtilityGetMarkers.OnRefreshed {
 
     MapFragment mapFragment;
     GoogleMap mMap;
+
+    int markerRefreshTimeout;
 
     Map<String, MyMarker> markersCollection = new HashMap<String, MyMarker>();
     EditText markerShortDescription;
@@ -45,6 +55,7 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
     TextView navUserLogin;
     TextView navUserFamNam;
+    TextView textViewMilSecondsDisplay;
 
     EditText shortDesc;
     EditText longDesc;
@@ -57,16 +68,26 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
     Button btnDial;
     Button btnSMS;
     Button btnDeleteMarker;
+    Button btnSubmitMapMarkerSettings;
+    Button btnDiscardMapMarkerSettings;
 
     RadioButton markerTypeCorrupt;
     RadioButton markerTypeLookFriends;
     RadioButton markerTypeAccident;
+
+    CheckBox checkBoxAllowAutoRefresh;
+    CheckBox checkBoxShowZoomButtons;
+    CheckBox checkBoxShowCompass;
+    CheckBox checkBoxShowMyLocation;
+
+    SeekBar seekBarMilliSeconds;
 
     Button buttonCreateMarker;
     Button buttonCancelCreateMarker;
 
     Dialog modalAddMarker;
     Dialog modalOnView;
+    Dialog modalMapAndMarkersSetting;
 
     LatLng positionToAddMarker;
 
@@ -77,6 +98,12 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
     User currentUser;
 
     ServerUtilityGetMarkers getMarkers;
+    ServerUtilityGetMarkers getMarkersAuto;
+
+    boolean autoRefresh;
+
+    Timer timer;
+    TimerTask doAsynchronousTask;
 
 
     @Override
@@ -88,7 +115,13 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
         currentUser = appSettings.getCurrentUser();
         prepareToolbar();
         fragmentSettings = new FragmentSettings();
+        autoRefresh = appSettings.getGetAllowAutoRefreshSetting();
 
+        try {
+            markerRefreshTimeout = Integer.parseInt(appSettings.getRefreshTimeout());
+        } catch (Exception e) {
+            markerRefreshTimeout = 20*1000;
+        }
 
 
     }
@@ -100,17 +133,12 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
     }
 
 
-
-
     @Override
     // Set up Map behavour
     public void onMapReady(GoogleMap map) {
         map.setIndoorEnabled(true);
         map.setBuildingsEnabled(true);
-        map.getUiSettings().setZoomControlsEnabled(true);
-        map.getUiSettings().setMyLocationButtonEnabled(true);
-        map.getUiSettings().setCompassEnabled(true);
-
+        reloadMap(map);
         map.setOnMyLocationButtonClickListener(new GoogleMap.OnMyLocationButtonClickListener() {
             @Override
             public boolean onMyLocationButtonClick() {
@@ -141,12 +169,11 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
         });
 
 
-        // эта строка всегда последняя!
         mMap = map;
 
 
         getMarkers = new ServerUtilityGetMarkers(this);
-        getMarkers.setDoDialog(true);
+        getMarkers.setDoDialog(false);
         ArrayList<MyMarker> markers;
         markers = new ArrayList<>();
         try {
@@ -154,11 +181,81 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        for (int i=0;i<markers.size();i++){
+        markersCollection.clear();
+        for (int i = 0; i < markers.size(); i++) {
             markers.get(i).addMarker(mMap);
-            markersCollection.put(markers.get(i).getMarker().getId(),markers.get(i));
+            markersCollection.put(markers.get(i).getMarker().getId(), markers.get(i));
         }
+        markers.clear();
+
+        getMarkersByTimer();
+
+    }
+
+    void onCreateModalMapAndMarkers() {
+        modalMapAndMarkersSetting = new Dialog(MapActivity.this);
+        modalMapAndMarkersSetting.setTitle(getResources().getString(R.string.MapAndMarkers));
+        modalMapAndMarkersSetting.setContentView(R.layout.map_and_markers);
+
+        btnSubmitMapMarkerSettings = (Button) modalMapAndMarkersSetting.findViewById(R.id.button_submit_map_marker_settings);
+        btnDiscardMapMarkerSettings = (Button) modalMapAndMarkersSetting.findViewById(R.id.button_discard_map_marker_settings);
+
+        checkBoxAllowAutoRefresh = (CheckBox) modalMapAndMarkersSetting.findViewById(R.id.checkBoxAllowAutoRefresh);
+        checkBoxShowCompass = (CheckBox) modalMapAndMarkersSetting.findViewById(R.id.checkboxShowCompass);
+        checkBoxShowMyLocation = (CheckBox) modalMapAndMarkersSetting.findViewById(R.id.checkboxShowMyLocationBtn);
+        checkBoxShowZoomButtons = (CheckBox) modalMapAndMarkersSetting.findViewById(R.id.checkboxShowZoomBtn);
+
+        seekBarMilliSeconds = (SeekBar) modalMapAndMarkersSetting.findViewById(R.id.seekBarMilSecs);
+
+        textViewMilSecondsDisplay = (TextView) modalMapAndMarkersSetting.findViewById(R.id.milSecndsDisplay);
+
+        checkBoxAllowAutoRefresh.setOnClickListener(this);
+
+        btnSubmitMapMarkerSettings.setOnClickListener(this);
+        btnDiscardMapMarkerSettings.setOnClickListener(this);
+
+
+        seekBarMilliSeconds.setMax(120);
+
+        // Инициализируем данные в окне из настроек
+        try {
+            seekBarMilliSeconds.setProgress(Integer.parseInt(appSettings.getRefreshTimeout()));
+        } catch (Exception e) {
+            seekBarMilliSeconds.setProgress(10);
+        }
+        textViewMilSecondsDisplay.setText(Integer.toString(seekBarMilliSeconds.getProgress()));
+
+
+        boolean b1 = appSettings.getGetAllowAutoRefreshSetting();
+        boolean b2 = appSettings.getGetShowZoomButtonSetting();
+        boolean b3 = appSettings.getGetShowCompassButtonSetting();
+        boolean b4 = appSettings.getGetShowMyLocationButtonSetting();
+        checkBoxAllowAutoRefresh.setChecked(b1);
+        checkBoxShowZoomButtons.setChecked(b2);
+        checkBoxShowCompass.setChecked(b3);
+        checkBoxShowMyLocation.setChecked(b4);
+        setSeekBarRefreshTimeoutVisible(checkBoxAllowAutoRefresh.isChecked());
+
+
+        seekBarMilliSeconds.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                textViewMilSecondsDisplay.setText(Integer.toString(seekBar.getProgress()) + getResources().getString(R.string.Sec));
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                appSettings.setRefreshTimeOut(seekBar.getProgress());
+            }
+        });
+
+        modalMapAndMarkersSetting.show();
 
     }
 
@@ -191,8 +288,7 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
     }
 
     // создает модальное окно и наполняет его данными
-    public void onCreateModalToViewMarker(Marker marker)
-    {
+    public void onCreateModalToViewMarker(Marker marker) {
         modalOnView = new Dialog(MapActivity.this);
         modalOnView.setTitle(markersCollection.get(marker.getId()).getUserLogin());
         modalOnView.setContentView(R.layout.modal_view_marker_r);
@@ -253,8 +349,6 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
         modalOnView.show();
     }
-
-
 
 
     /**
@@ -319,9 +413,10 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
         switch (item.getItemId()) {
             case R.id.nav_map:
+                onCreateModalMapAndMarkers();
                 break;
             case R.id.nav_settings:
-                fragmentTransaction.replace(R.id.content_main,fragmentSettings);
+                //fragmentTransaction.replace(R.id.content_main, fragmentSettings);
                 break;
             case R.id.nav_filtering:
                 break;
@@ -340,7 +435,6 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
 
     /**
-     *
      * Обработчики нажатия на кнопки
      */
 
@@ -358,12 +452,10 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
                 if (markerTypeCorrupt.isChecked()) type = 2;
                 if (markerTypeLookFriends.isChecked()) type = 3;
 
-                MyMarker m = new MyMarker(positionToAddMarker, markerShortDescription.getText().toString(), markerLongDescription.getText().toString(),markerUserPhone.getText().toString(), type, true, currentUser.getLogin());
-                m.addMarker(mMap);
+                MyMarker m = new MyMarker(positionToAddMarker, markerShortDescription.getText().toString(), markerLongDescription.getText().toString(), markerUserPhone.getText().toString(), type, true, currentUser.getLogin());
                 ServerUtilityAddMarker addMarker = new ServerUtilityAddMarker(this, m, currentUser);
                 addMarker.execute();
                 modalAddMarker.dismiss();
-                markersCollection.put(m.getMarker().getId(), m);
                 break;
             case R.id.buttonDial:
                 Intent dialIntent = new Intent(Intent.ACTION_DIAL);
@@ -377,10 +469,114 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
                 break;
 
             case R.id.buttonDeleteMarker:
+                ServerUtilityRemoveMarker removeMarker = new ServerUtilityRemoveMarker(MapActivity.this, selectedMarker, appSettings.getIpAddress());
+                removeMarker.execute();
                 modalOnView.cancel();
                 break;
+
+            // Маркеры и карта
+            case R.id.checkBoxAllowAutoRefresh:
+                setSeekBarRefreshTimeoutVisible(checkBoxAllowAutoRefresh.isChecked());
+                break;
+
+            case R.id.button_submit_map_marker_settings:
+                appSettings.setAllowAutoRefresh(checkBoxAllowAutoRefresh.isChecked());
+                setSeekBarRefreshTimeoutVisible(checkBoxAllowAutoRefresh.isChecked());
+                appSettings.setShowCompassButton(checkBoxShowCompass.isChecked());
+                appSettings.setShowMyLocationButton(checkBoxShowMyLocation.isChecked());
+                appSettings.setShowZoomButton(checkBoxShowZoomButtons.isChecked());
+                modalMapAndMarkersSetting.dismiss();
+                markerRefreshTimeout = seekBarMilliSeconds.getProgress()*1000;
+                appSettings.setRefreshTimeOut(markerRefreshTimeout);
+                reloadMap(mMap);
+                break;
+            case R.id.button_discard_map_marker_settings:
+                modalMapAndMarkersSetting.dismiss();
+                break;
+        }
+
+
+    }
+
+    private void reloadMap(GoogleMap m) {
+        m.getUiSettings().setCompassEnabled(appSettings.getGetShowCompassButtonSetting());
+        m.getUiSettings().setMyLocationButtonEnabled(appSettings.getGetShowMyLocationButtonSetting());
+        m.getUiSettings().setZoomControlsEnabled(appSettings.getGetShowZoomButtonSetting());
+        autoRefresh = appSettings.getGetAllowAutoRefreshSetting();
+
+    }
+
+    public void setSeekBarRefreshTimeoutVisible(boolean b) {
+        if (b) {
+            seekBarMilliSeconds.setVisibility(View.VISIBLE);
+            textViewMilSecondsDisplay.setVisibility(View.VISIBLE);
+        } else {
+            seekBarMilliSeconds.setVisibility(View.INVISIBLE);
+            textViewMilSecondsDisplay.setVisibility(View.INVISIBLE);
         }
 
     }
 
+
+    //Рефреш маркеров по таймеру
+    void getMarkersByTimer() {
+        mMap.clear();
+        final Handler handler;
+        handler = new Handler();
+        timer = new Timer();
+        doAsynchronousTask = new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(new Runnable() {
+                    public void run() {
+                        try {
+                            MapActivity.this.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    getMarkersAuto = new ServerUtilityGetMarkers(MapActivity.this);
+                                    getMarkersAuto.setDoDialog(false);
+                                    getMarkersAuto.setOnRefreshed(MapActivity.this);
+                                    if (appSettings.getGetAllowAutoRefreshSetting()) {
+                                        try {
+                                            getMarkersAuto.execute();
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                        }
+
+                                    }
+                                }
+
+                            });
+                        } catch (Exception e) {
+
+                        }
+                    }
+                });
+            }
+        };
+
+
+        timer.schedule(doAsynchronousTask, 50, markerRefreshTimeout);
+    }
+
+    @Override
+    public void onRefreshCompleted() throws ExecutionException, InterruptedException {
+        ArrayList<MyMarker> mMarkers = getMarkersAuto.getMarkers();
+        markersCollection.clear();
+        mMap.clear();
+        if (mMarkers.size() > 0)
+            redrawMarkers(mMarkers);
+    }
+
+    private void redrawMarkers(ArrayList<MyMarker> mMarkers) {
+        try {
+            for (int i = 0; i < mMarkers.size(); i++) {
+                mMarkers.get(i).addMarker(mMap);
+                markersCollection.put(mMarkers.get(i).getMarker().getId(),mMarkers.get(i));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
+

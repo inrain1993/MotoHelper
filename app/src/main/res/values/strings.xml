@@ -12,7 +12,7 @@
     <string name="btnAllowPushNotifications">Разрешить присылать уведомления</string>
     <string name="MarkerListenRad">Радиус прослушивания маркеров (км)</string>
     <string name="MarkerListenType">Показывать уведомление, если добавлен маркер типа:</string>
-    <string name="allowautorefresh">Разрешить автоматическое обновление данных</string>
+    <string name="allowautorefresh">Обновоять автоматически</string>
     <string name="app_enter">Войти</string>
     <string name="app_register">Регистрация</string>
     <string name="title_activity_main_menu">Moto Helper</string>
@@ -73,4 +73,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="MapSettings">Настройки карты</string>
+    <string name="SettingsApp">Настройки приложения</string>
+    <string name="MapAndMarkers">Карта и маркеры</string>
+    <string name="MarkerSettings">Настройки маркеров</string>
+    <string name="showZoomBtn">Показывать кнопки масштаба</string>
+    <string name="showZoomCompass">Показывать компас</string>
+    <string name="showMyLocationBtn">Показывать кнопку \"Мое местоположение\"</string>
+    <string name="showCompass">Показывать компасс</string>
+    <string name="unableLoadSettings">Не удалось загрузить настройки</string>
+    <string name="Submit">Применить</string>
+    <string name="Discard">Отмена</string>
+    <string name="Sec">сек.</string>
 </resources>
