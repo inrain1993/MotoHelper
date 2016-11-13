@@ -79,4 +79,5 @@
     <string name="setipcancel">Отмена</string>
     <string name="UserInvalid">Неверное имя пользователя или пароль</string>
     <string name="NoConnection">Невозможно подключиться к серверу</string>
+    <string name="Actions">Действия</string>
 </resources>

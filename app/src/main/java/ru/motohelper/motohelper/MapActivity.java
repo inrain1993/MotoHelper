@@ -95,11 +95,11 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
     SettingsHolder appSettings;
 
+
     MyMarker selectedMarker;
 
     User currentUser;
 
-    ServerUtilityGetMarkers getMarkers;
     ServerUtilityGetMarkers getMarkersAuto;
 
     boolean autoRefresh;
@@ -122,7 +122,7 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
         try {
             markerRefreshTimeout = Integer.parseInt(appSettings.getRefreshTimeout());
         } catch (Exception e) {
-            markerRefreshTimeout = 20*1000;
+            markerRefreshTimeout = 20 * 1000;
         }
 
 
@@ -173,23 +173,6 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
         mMap = map;
 
-
-        getMarkers = new ServerUtilityGetMarkers(this);
-        getMarkers.setDoDialog(false);
-        ArrayList<MyMarker> markers;
-        markers = new ArrayList<>();
-        try {
-            markers = getMarkers.execute().get();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        markersCollection.clear();
-        for (int i = 0; i < markers.size(); i++) {
-            markers.get(i).addMarker(mMap);
-            markersCollection.put(markers.get(i).getMarker().getId(), markers.get(i));
-        }
-        markers.clear();
-
         getMarkersByTimer();
 
     }
@@ -221,7 +204,7 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
         // Инициализируем данные в окне из настроек
         try {
-            seekBarMilliSeconds.setProgress(Integer.parseInt(appSettings.getRefreshTimeout()));
+            seekBarMilliSeconds.setProgress(Integer.parseInt(appSettings.getRefreshTimeout()) / 1000);
         } catch (Exception e) {
             seekBarMilliSeconds.setProgress(10);
         }
@@ -407,6 +390,9 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Обработчики нажатий на элементы бокового меню
+     */
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -423,8 +409,17 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
             case R.id.nav_filtering:
                 break;
             case R.id.nav_vk:
+                Uri adress = Uri.parse("https://vk.com/motohelper_official");
+                Intent openLink = new Intent(Intent.ACTION_VIEW, adress);
+                startActivity(openLink);
                 break;
             case R.id.nav_youtube:
+                Uri adress2 = Uri.parse("https://www.youtube.com/channel/UC2FyacbcsACH-OZZ9Xi4yYg");
+                Intent openLink2 = new Intent(Intent.ACTION_VIEW, adress2);
+                startActivity(openLink2);
+                break;
+            case R.id.nav_refresh:
+                refreshMarkers(false);
                 break;
         }
         fragmentTransaction.commit();
@@ -437,7 +432,7 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
 
     /**
-     * Обработчики нажатия на кнопки
+     * Обработчики нажатия на кнопки в активности
      */
 
 
@@ -488,9 +483,16 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
                 appSettings.setShowMyLocationButton(checkBoxShowMyLocation.isChecked());
                 appSettings.setShowZoomButton(checkBoxShowZoomButtons.isChecked());
                 modalMapAndMarkersSetting.dismiss();
-                markerRefreshTimeout = seekBarMilliSeconds.getProgress()*1000;
+                markerRefreshTimeout = seekBarMilliSeconds.getProgress() * 1000;
                 appSettings.setRefreshTimeOut(markerRefreshTimeout);
                 reloadMap(mMap);
+
+                try {
+                    refreshMarkers(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
                 break;
             case R.id.button_discard_map_marker_settings:
                 modalMapAndMarkersSetting.dismiss();
@@ -574,11 +576,18 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
         try {
             for (int i = 0; i < mMarkers.size(); i++) {
                 mMarkers.get(i).addMarker(mMap);
-                markersCollection.put(mMarkers.get(i).getMarker().getId(),mMarkers.get(i));
+                markersCollection.put(mMarkers.get(i).getMarker().getId(), mMarkers.get(i));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void refreshMarkers(boolean doDialog) {
+        getMarkersAuto = new ServerUtilityGetMarkers(MapActivity.this);
+        getMarkersAuto.setDoDialog(doDialog);
+        getMarkersAuto.setOnRefreshed(MapActivity.this);
+        getMarkersAuto.execute();
     }
 
     private void openQuitDialog() {
@@ -608,7 +617,8 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
         quitDialog.show();
     }
-    public void onDestroyActivity(){
+
+    public void onDestroyActivity() {
         super.onBackPressed();
     }
 }

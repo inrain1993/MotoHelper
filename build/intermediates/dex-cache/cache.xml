@@ -2,24 +2,6 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e56f31b23ddb067f95f01255295167db7c798612">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-appinvite-9.8.0_16821833b08aa433e7d72f3d8c194e1145683d7c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5ffe8867f51cfc726e9fb21db1e5b6962ebf25a0">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-messaging-9.8.0_c0cac72a44f4faae20245481528f61c4650d6bc5.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
         jumboMode="true"
@@ -29,40 +11,40 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.8.0_6665e454a2d13b6092a2640899ddba57a97e3ebb\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-maps-9.8.0_f4f3322d4b6a1ad2a73044d50da90bcffac5a8e8.jar" />
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.8.0_772ed6b527fc58f1e82a8024515519697914e02a\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a7a04d6b7c01e569a285fa627cf64f5b05295906">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-fitness-9.8.0_e8119d35b81ba32540df1e86f09a5319ef496b83.jar" />
+        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.8.0_b1679063729bbb9b545c0e2e52f3f75cbe47d3b2\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\internal_impl-24.0.0_6c961cdc0d2a8013c959a5dcaf868724e1f507a3.jar" />
+        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-9.8.0_ca051df06d6a0f82c754f78f82df2ae34f03f2c0\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\internal_impl-25.0.0_56262be07565074fb6f7b91d40eccc53912dfe35.jar" />
+        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.8.0_49dc840ed1af3af2cef27a20c213be803440cbe5\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -93,6 +75,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="266570862e5792ef3c51143a8b8593cf54fac68d">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.8.0_3578caa7def79507fd1f49e4867341b9ff792b49\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.8.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -110,13 +101,22 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.0_6e97aabeb3c01342863f62d1bf6f0cd4b5c7b7cb\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="f2d240dd085626f03f759c41d628a0c8b63e491f">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-ads-9.8.0_fa7eb482390df46e2f4c47ce60c551a7f6536371.jar" />
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.0_36fafe9f14b73ff8960470cdfe995420f5ae2829\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="055eed08c9cff50cac0db69c74c4d9ff7aef3d84">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-9.8.0_b8de982aa526eca59a29f4e4ae8f6c53710741c0\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -128,24 +128,6 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.8.0_e00d1f2081316b0fbafd0101bb0314c9f0a428df\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-basement-9.8.0_ef15115447b52628a98687a2056908dfa0da67ce.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\internal_impl-25.0.0_0dfc8797fc7fcd3d8b50ce1361be48ae4ab01ff1.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.8.0\jars\classes.jar"
         jumboMode="true"
@@ -155,13 +137,13 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-9.8.0_7b1dcc2e162eddf2afd99604dfb3343196a308aa\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-gcm-9.8.0_fc7415853b6b4e269af681d393dddd483fa1381b.jar" />
+        sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.8.0_d31601b3cecc2c7aff4a2201e7e5db2444d3645c\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -191,13 +173,31 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.0_36c0b37378338a5c3deb1e41a7e4cca7546924d2\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-support-core-ui-25.0.0_b97a1ee89e89ac406e8f122a178c0fcb57b9f445.jar" />
+        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.8.0_f94445fa8a93185c1d9dce6c385c79c437e27eba\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_88fbcf46f2205b483ff9d80a352ac7ce6037be7d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.8.0_5fd56a3b6cf9a82d61c0e5ba6ab7a6efefd411bc\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -207,15 +207,6 @@
         revision="25.0.0"
         sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.8.0_9d5ec085c2070cd7a0b7e4d76ff56af3ede4627d\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="679251204de40ace98776a6f4e3a649c27e3d89f">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-places-9.8.0_1cb3e7eacf695205e4be4db4dc4ba627335da4ed.jar" />
     </item>
     <item
         is-multidex="true"
@@ -236,22 +227,13 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.8.0_1d5a29c9a355b59d5a1a09f2154e07133b3e7c29\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-25.0.0_3afed15f28871d83b2e4caad24affeda330aa207.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="289cad663c288ce965463cb9ece8b35cc7de0fac">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-config-9.8.0_9d159cdc683030e51fab64dff5e20cd9cdda9004.jar" />
+        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.8.0_a3f8874a5de4cd2b08bce8fe922615948525ef16\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -263,13 +245,13 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-9.8.0_d9a325b9ab5bb1cea6e0a11ba36f99cf521002cf\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a2537b11ae24b42172d34e2a613fc0b903c56158">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-awareness-9.8.0_c2fed37f3ac0847e465d86cf3f1a169b1189c31e.jar" />
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_ea947f348d026a9a1062eb598bdbcee30e8eff05\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -281,40 +263,40 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.8.0_dafd8fcfc639fe3d0717a951216e05271338d8a5\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="00d358528c5a8731a6e19bca910cbb3fd755ee31">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-instantapps-9.8.0_8fbf23834f61246aca130f6f66bb29e32646dcb5.jar" />
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_27b96f87741c971aa60818b03872aaed183e7adc\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="0b53c4b90654b67ee3892a8e2e7b819c083ab7a6">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-drive-9.8.0_c3afa8a25021cdeb2872aaa930fb69cb03750aad.jar" />
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.0_8be52c9d89db6ab363abb10820200b991f67e0d8\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="74ac7cbcf0de4a88e59612dc3a9e3f9e71acb4ca">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-cast-9.8.0_ca28efe01fdec523027c5f959a44b4dcb06fd7f9.jar" />
+        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-9.8.0_a48ea282bfc8a084412181d01c76ef08bee44d18\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-25.0.0_750cd3aa55cebf42ce90cff5825b6c292ee72e8a.jar" />
+        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.8.0_cdccb365b70953a43492f75a0d16b847c37f3a63\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -326,13 +308,22 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.8.0_1ec271abed4e0125c00965680dc3398a0a45e7bc\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="055eed08c9cff50cac0db69c74c4d9ff7aef3d84">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-cast-framework-9.8.0_b8de982aa526eca59a29f4e4ae8f6c53710741c0.jar" />
+        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.8.0_2d3bc8fbbb1d4a226a477d9c6aad28a1b2f3e657\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.8.0_3237cc804e67bcfea9df09e01672fb5be67f6be1\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -362,13 +353,22 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-9.8.0_d0ca2c25dfe0aa83299a1e12ac4ab5f93de0b3f8\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-tasks-9.8.0_6665e454a2d13b6092a2640899ddba57a97e3ebb.jar" />
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.0_9050cfc640e6a8511e04ae365786394f091883b2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.8.0_f4f3322d4b6a1ad2a73044d50da90bcffac5a8e8\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -389,31 +389,13 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_56262be07565074fb6f7b91d40eccc53912dfe35\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-common-9.8.0_772ed6b527fc58f1e82a8024515519697914e02a.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="bd1e744d38718c202d37bea89989e6ad628478b7">
+        sha1="5225c118f52c7f1f73130c24d9d8f4c341f7cbe6">
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_50aeda09ed5be02da891841974dca26901d4df26\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-analytics-9.8.0_49dc840ed1af3af2cef27a20c213be803440cbe5.jar" />
     </item>
     <item
         is-multidex="true"
@@ -434,22 +416,13 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.0_9a8a0f8e24b84bda6faa56677ca6f39078f4c3ed\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\design\25.0.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-design-25.0.0_1bfd8ac9a2c8f18ad5ed177025abbb2ebd00acf7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7fd91ec2730fdaa82906aad32a3f3d3e574bae56">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-storage-9.8.0_f73667e6467472bb4431d79e44e7942d4bfa0b32.jar" />
+        sha1="e56f31b23ddb067f95f01255295167db7c798612">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.8.0_16821833b08aa433e7d72f3d8c194e1145683d7c\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -461,13 +434,13 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.8.0_9d159cdc683030e51fab64dff5e20cd9cdda9004\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-support-media-compat-25.0.0_36fafe9f14b73ff8960470cdfe995420f5ae2829.jar" />
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_65fea51a1ea65c9413531c925154ffbe58594964\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -477,6 +450,15 @@
         revision="25.0.0"
         sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.8.0_ef3086f9c3fa4aba33e51788c075d3b3d0f0b4bc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.0_b97a1ee89e89ac406e8f122a178c0fcb57b9f445\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -497,40 +479,13 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.0_ebf2d370566210aaee9622f8b0c472e63c770263\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="I:\AndroidSDK\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\support-annotations-25.0.0_6e97aabeb3c01342863f62d1bf6f0cd4b5c7b7cb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="20a3c4e355150c15c13dd58045d43ad0c717d916">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-safetynet-9.8.0_d9a325b9ab5bb1cea6e0a11ba36f99cf521002cf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-appindexing-9.8.0_f94445fa8a93185c1d9dce6c385c79c437e27eba.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-25.0.0_32a0c865e16f334c11de140184b52f470caae52c.jar" />
+        sha1="f2d240dd085626f03f759c41d628a0c8b63e491f">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.8.0_fa7eb482390df46e2f4c47ce60c551a7f6536371\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -542,13 +497,13 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.8.0_b453c6d7f5490cddc67003e54f14df869a9b90ec\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="ec9104b53aee77dfcfd2fe1c4add23ff7c4df55f">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-storage-common-9.8.0_7b1dcc2e162eddf2afd99604dfb3343196a308aa.jar" />
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_0dfc8797fc7fcd3d8b50ce1361be48ae4ab01ff1\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -569,40 +524,22 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.8.0_fc7415853b6b4e269af681d393dddd483fa1381b\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-gass-9.8.0_a48ea282bfc8a084412181d01c76ef08bee44d18.jar" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.0_3afed15f28871d83b2e4caad24affeda330aa207\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-palette-v7-24.0.0_88fbcf46f2205b483ff9d80a352ac7ce6037be7d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-auth-9.8.0_d31601b3cecc2c7aff4a2201e7e5db2444d3645c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-location-9.8.0_8a7bbcbb8ba0f2402890ffe9bdbcc2d550e8519e.jar" />
+        sha1="0b8e087da59c0b062c33f49a335e59f907086da2">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.8.0_21c4cb6f2dee715147b21c39d750004ee232ab00\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -614,13 +551,13 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-9.8.0_912bab478bf8a47392f9c78fc1928577c573c71e\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-support-compat-25.0.0_8be52c9d89db6ab363abb10820200b991f67e0d8.jar" />
+        sha1="00d358528c5a8731a6e19bca910cbb3fd755ee31">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-9.8.0_8fbf23834f61246aca130f6f66bb29e32646dcb5\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -632,15 +569,6 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-9.8.0_c2fed37f3ac0847e465d86cf3f1a169b1189c31e\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e9b2cfdfd59b03643f1e240668275378b96615a8">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-ads-lite-9.8.0_dafd8fcfc639fe3d0717a951216e05271338d8a5.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.8.0\jars\classes.jar"
         jumboMode="true"
@@ -650,22 +578,22 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-9.8.0_64f72ac6a286f6a737685c8d53eb5882ba8540c7\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-support-fragment-25.0.0_36c0b37378338a5c3deb1e41a7e4cca7546924d2.jar" />
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.0_d1e5fa45118637293591b891642bdfa355a58f0b\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.8.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-auth-base-9.8.0_2d3bc8fbbb1d4a226a477d9c6aad28a1b2f3e657.jar" />
+        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.8.0_33e682d6ac691e30652c097a3921cfec9bf3b3c8\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -675,6 +603,15 @@
         revision="25.0.0"
         sha1="b4671be3d1288bf4e5f527cd33e42909fbe4ecc6">
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-9.8.0_2f29758c8d2be55ab0dc0b49bf71dedb3090807e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0b53c4b90654b67ee3892a8e2e7b819c083ab7a6">
+        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.8.0_c3afa8a25021cdeb2872aaa930fb69cb03750aad\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -691,7 +628,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="d1dfcfa754cddd88c6cacd0395b6b622c11350ec">
+        sha1="9576383f9da0820bef2fe8d9210a0dd0ed4c54b4">
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_f86ce9d64e949015924c84ab8b9d2426c12804ba\classes.dex" />
     </item>
     <item
@@ -704,573 +641,6 @@
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.8.0_ca28efe01fdec523027c5f959a44b4dcb06fd7f9\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9ff04cc3470178a44512624036751a803418c2ca">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-analytics-9.8.0_1ec271abed4e0125c00965680dc3398a0a45e7bc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-database-connection-9.8.0_cdccb365b70953a43492f75a0d16b847c37f3a63.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-support-vector-drawable-25.0.0_9050cfc640e6a8511e04ae365786394f091883b2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ca851be26ff89f5b32cc222cee98139fb3fac830">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-auth-9.8.0_96dbd9250f8296882dc3fd0d39aa8b379281e378.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-support-core-utils-25.0.0_ebf2d370566210aaee9622f8b0c472e63c770263.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.8.0_772ed6b527fc58f1e82a8024515519697914e02a\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\internal_impl-25.0.0_65fea51a1ea65c9413531c925154ffbe58594964.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.8.0_b1679063729bbb9b545c0e2e52f3f75cbe47d3b2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-9.8.0_ca051df06d6a0f82c754f78f82df2ae34f03f2c0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.8.0_49dc840ed1af3af2cef27a20c213be803440cbe5\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-transition-25.0.0_9a8a0f8e24b84bda6faa56677ca6f39078f4c3ed.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-iid-9.8.0_ef3086f9c3fa4aba33e51788c075d3b3d0f0b4bc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-auth-module-9.8.0_a3f8874a5de4cd2b08bce8fe922615948525ef16.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="266570862e5792ef3c51143a8b8593cf54fac68d">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.8.0_3578caa7def79507fd1f49e4867341b9ff792b49\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.0_36fafe9f14b73ff8960470cdfe995420f5ae2829\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="055eed08c9cff50cac0db69c74c4d9ff7aef3d84">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-9.8.0_b8de982aa526eca59a29f4e4ae8f6c53710741c0\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0b8e087da59c0b062c33f49a335e59f907086da2">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-wearable-9.8.0_21c4cb6f2dee715147b21c39d750004ee232ab00.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="cef85cfc7df40e29fbea58844dd4c1e7d0b15542">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-identity-9.8.0_b453c6d7f5490cddc67003e54f14df869a9b90ec.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.8.0_d31601b3cecc2c7aff4a2201e7e5db2444d3645c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.8.0_f94445fa8a93185c1d9dce6c385c79c437e27eba\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-wallet-9.8.0_33e682d6ac691e30652c097a3921cfec9bf3b3c8.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_88fbcf46f2205b483ff9d80a352ac7ce6037be7d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.8.0_5fd56a3b6cf9a82d61c0e5ba6ab7a6efefd411bc\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a972970c8beddb69c198f61f3fc55f0606a7dfe3">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-tagmanager-9.8.0_c7eaf6899d15112bd7b4be7731fd2d8e1079e3b2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="fbb3885c40e431cd2b0dc69c0cab2bf6d5da7b43">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-games-9.8.0_912bab478bf8a47392f9c78fc1928577c573c71e.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.8.0_a3f8874a5de4cd2b08bce8fe922615948525ef16\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_ea947f348d026a9a1062eb598bdbcee30e8eff05\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-animated-vector-drawable-25.0.0_d1e5fa45118637293591b891642bdfa355a58f0b.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_27b96f87741c971aa60818b03872aaed183e7adc\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="50e35ae101a679c4c8ef3dda075b1df9d5d947d9">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-analytics-impl-9.8.0_64f72ac6a286f6a737685c8d53eb5882ba8540c7.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.0_8be52c9d89db6ab363abb10820200b991f67e0d8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-9.8.0_a48ea282bfc8a084412181d01c76ef08bee44d18\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b4671be3d1288bf4e5f527cd33e42909fbe4ecc6">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-crash-9.8.0_2f29758c8d2be55ab0dc0b49bf71dedb3090807e.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.8.0_cdccb365b70953a43492f75a0d16b847c37f3a63\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="190a642ba16d1421296a4d794606279b80039c59">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-analytics-impl-9.8.0_3da0681cb0075a3e3a6d94bafd7bf2205c916983.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.8.0_2d3bc8fbbb1d4a226a477d9c6aad28a1b2f3e657\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.8.0_3237cc804e67bcfea9df09e01672fb5be67f6be1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.0_9050cfc640e6a8511e04ae365786394f091883b2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.8.0_f4f3322d4b6a1ad2a73044d50da90bcffac5a8e8\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-auth-common-9.8.0_b1679063729bbb9b545c0e2e52f3f75cbe47d3b2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-clearcut-9.8.0_ca051df06d6a0f82c754f78f82df2ae34f03f2c0.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e56f31b23ddb067f95f01255295167db7c798612">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.8.0_16821833b08aa433e7d72f3d8c194e1145683d7c\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3daa7a9c9009fd386872a84c177a76979bdcafd6">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-plus-9.8.0_21115d8768194d5827b5ad48503da34169bb14c5.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_65fea51a1ea65c9413531c925154ffbe58594964\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="266570862e5792ef3c51143a8b8593cf54fac68d">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-tagmanager-api-9.8.0_3578caa7def79507fd1f49e4867341b9ff792b49.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.0_b97a1ee89e89ac406e8f122a178c0fcb57b9f445\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a30aea7df545072ad3c06f56b2efc13e67222140">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-vision-9.8.0_e00d1f2081316b0fbafd0101bb0314c9f0a428df.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f2d240dd085626f03f759c41d628a0c8b63e491f">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.8.0_fa7eb482390df46e2f4c47ce60c551a7f6536371\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-base-9.8.0_3237cc804e67bcfea9df09e01672fb5be67f6be1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.android.support-mediarouter-v7-24.0.0_0ec7a4de8a17b26d893f2683b0910fca7a998768.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_0dfc8797fc7fcd3d8b50ce1361be48ae4ab01ff1\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-iid-9.8.0_9d5ec085c2070cd7a0b7e4d76ff56af3ede4627d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\internal_impl-25.0.0_ea947f348d026a9a1062eb598bdbcee30e8eff05.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.0_3afed15f28871d83b2e4caad24affeda330aa207\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-database-9.8.0_5fd56a3b6cf9a82d61c0e5ba6ab7a6efefd411bc.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0b8e087da59c0b062c33f49a335e59f907086da2">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.8.0_21c4cb6f2dee715147b21c39d750004ee232ab00\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="2d3035050a075484cbf2e33f1ce1f779bae4d451">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-panorama-9.8.0_1d5a29c9a355b59d5a1a09f2154e07133b3e7c29.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="00d358528c5a8731a6e19bca910cbb3fd755ee31">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-9.8.0_8fbf23834f61246aca130f6f66bb29e32646dcb5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_b10919d734e366c5c07926afcc849e451a86c3d9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.0_d1e5fa45118637293591b891642bdfa355a58f0b\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\internal_impl-25.0.0_27b96f87741c971aa60818b03872aaed183e7adc.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.8.0_33e682d6ac691e30652c097a3921cfec9bf3b3c8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0b53c4b90654b67ee3892a8e2e7b819c083ab7a6">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.8.0_c3afa8a25021cdeb2872aaa930fb69cb03750aad\classes.dex" />
-    </item>
-    <item
         is-multidex="true"
         jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.8.0\jars\classes.jar"
         jumboMode="true"
@@ -1278,15 +648,6 @@
         revision="25.0.0"
         sha1="190a642ba16d1421296a4d794606279b80039c59">
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.8.0_3da0681cb0075a3e3a6d94bafd7bf2205c916983\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c81df6bd515398ebe45089b0b16c55752a131f6a">
-        <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-nearby-9.8.0_d0ca2c25dfe0aa83299a1e12ac4ab5f93de0b3f8.jar" />
     </item>
 
 </items>

@@ -137,6 +137,11 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
         modal.show();
     }
 
+    /**
+     *
+     * Обработчики нажатия на кнопки активностей
+     */
+
 
     @Override
     public void onClick(View view) {
