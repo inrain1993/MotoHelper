@@ -1,7 +1,6 @@
 package ru.motohelper.motohelper;
 
 
-
 import android.Manifest;
 
 import android.app.Dialog;
@@ -24,6 +23,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.concurrent.ExecutionException;
 
 public class StartActivity extends AppCompatActivity implements View.OnClickListener {
     Button btnLogin;
@@ -55,10 +55,13 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
 
 
         if (checkPermissions()) {
-        } else {setPermissions();}
+        } else {
+            setPermissions();
+        }
 
 
         appSettings = new SettingsHolder(this);
+        appSettings.setIpAddress("http://motohelperapp.ru/dbmhelp/");
 
         btnLogin = (Button) findViewById(R.id.btLogin);
         btnRegister = (Button) findViewById(R.id.btnGoRegistrate);
@@ -148,19 +151,32 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                 if (remember.isChecked()) {
                     appSettings.setUserNamePassword(email.getText().toString(), password.getText().toString());
                 }
-                userLogin = new ServerUtilityUserLogin(this, email.getText().toString(), password.getText().toString());
+                userLogin = new ServerUtilityUserLogin(StartActivity.this, email.getText().toString(), password.getText().toString());
+
                 try {
-                    currentUser = userLogin.execute().get();
-                    appSettings.setCurrentUser(currentUser);
-                    Toast.makeText(this, currentUser.getFirstName(), Toast.LENGTH_SHORT).show();
-                } catch (Exception ex) {
-                    ex.printStackTrace();
+                    currentUser =userLogin.execute().get();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
                 }
+                appSettings.setCurrentUser(currentUser);
+                    Toast.makeText(this, currentUser.getFirstName(), Toast.LENGTH_SHORT).show();
+
 
                 //по условию
 
+                if (currentUser.getLogin().equals("invalid")) {
+                    Toast.makeText(StartActivity.this, getResources().getText(R.string.UserInvalid), Toast.LENGTH_SHORT).show();
+                    break;
+                }
+                if (currentUser.getLogin().equals("noConnection")) {
+                    Toast.makeText(StartActivity.this, getResources().getText(R.string.NoConnection), Toast.LENGTH_SHORT).show();
+                    break;
+                }
                 Intent mapIntent = new Intent(this, MapActivity.class);
                 startActivity(mapIntent);
+
 
                 break;
             case R.id.btnGoRegistrate:

@@ -2,4 +2,5 @@
 <resources>
     <item name="Settings" type="id">Настройки</item>
     <item name="unableLoadSettings" type="id">Не удалось загрузить настройки</item>
+    <item name="UserInvalid" type="id">Неверное имя пользователя или пароль</item>
 </resources>

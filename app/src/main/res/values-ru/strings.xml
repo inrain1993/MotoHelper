@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MotoHelper</string>
-    <string name="action_settings">Тип Карты</string>
     <string name="InstNotif">Сервис Moto Helper Работает!</string>
     <string name="SpecifyIP">Указать IP сервера</string>
     <string name="btnRegistrationText">Регистрация</string>
     <string name="btnAllowPushNotifications">Разрешить присылать уведомления</string>
     <string name="MarkerListenRad">Радиус прослушивания маркеров (км)</string>
     <string name="MarkerListenType">Показывать уведомление, если добавлен маркер типа:</string>
-    <string name="allowautorefresh">Обновлять автоматически</string>
     <string name="app_enter">Войти</string>
     <string name="app_register">Регистрация</string>
-    <string name="title_activity_main_menu">Moto Helper</string>
     <string name="title_activity_registration">Регистрация</string>
     <string name="action_map">Карта</string>
     <string name="action_exit">Выход</string>
     <string name="Mark">Оставить отзыв</string>
-    <string name="title_activity_helper_map">Map</string>
-    <string name="addMarker">Добавить метку</string>
+    <string name="title_activity_helper_map">Карта</string>
     <string name="shortdesc">Краткое описание</string>
     <string name="longdesc">Подробное описание</string>
     <string name="beginChat">Начать чат</string>
@@ -59,4 +55,28 @@
     <string name="Submit">Применить</string>
     <string name="Discard">Отмена</string>
     <string name="Sec">сек.</string>
+    <string name="ButtonEnterText">Войти</string>
+    <string name="FilterSettings">Настройки фильтрации</string>
+    <string name="Map">Карта</string>
+    <string name="MapAndMarkers">Карта и маркеры</string>
+    <string name="MapSettings">Настройки карты</string>
+    <string name="MarkerWasAdded">Добавлен маркер</string>
+    <string name="MarkerWasAddednearby">Недалеко добавлен новый маркер</string>
+    <string name="MarkerSettings">Настройки маркеров</string>
+    <string name="PasswordsIncorrect">Проверьте правильность заполнения формы</string>
+    <string name="SettingsApp">Настройки приложения</string>
+    <string name="SpecifyMarkerTypes">Укажите типы маркеров</string>
+    <string name="StiIpCancel">Отмена</string>
+    <string name="Youtube">Youtube</string>
+    <string name="action_refresh">Обновить</string>
+    <string name="action_settings">Настройки</string>
+    <string name="watch_markers">Cписок маркеров</string>
+    <string name="unableLoadSettings">Не удалось загрузить настройки</string>
+    <string name="showZoomCompass">Показывать компасс</string>
+    <string name="showZoomBtn">Показывать кнопки масштаба</string>
+    <string name="showMyLocationBtn">Показывать кнопку \"Мое местоположение\"</string>
+    <string name="showCompass">Показывать компасс</string>
+    <string name="setipcancel">Отмена</string>
+    <string name="UserInvalid">Неверное имя пользователя или пароль</string>
+    <string name="NoConnection">Невозможно подключиться к серверу</string>
 </resources>

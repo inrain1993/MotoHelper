@@ -1,30 +1,21 @@
 <resources>
     <string name="app_name">MotoHelper</string>
-    <string name="action_settings">Тип Карты</string>
-    <string name="MarkerWasAddednearby">Добавлен новый маркер недалеко от Вас!</string>
     <string name="InstNotif">Сервис Moto Helper Работает!</string>
-    <string name="SpecifyMarkerTypes">Пожалуйста укажите, какие маркеры Вы бы хотели видеть на карте:</string>
-    <string name="MarkerWasAdded">Добавлен новый маркер</string>
-    <string name="action_settings_app">Настройки</string>
     <string name="SpecifyIP">Указать IP сервера</string>
-    <string name="ButtonEnterText">Войти</string>
-    <string name="btnRegistrationText">Регистрация</string>
-    <string name="btnAllowPushNotifications">Разрешить присылать уведомления</string>
     <string name="MarkerListenRad">Радиус прослушивания маркеров (км)</string>
     <string name="MarkerListenType">Показывать уведомление, если добавлен маркер типа:</string>
-    <string name="allowautorefresh">Обновоять автоматически</string>
+    <string name="allowautorefresh" translatable="false">Обновоять автоматически</string>
     <string name="app_enter">Войти</string>
     <string name="app_register">Регистрация</string>
-    <string name="title_activity_main_menu">Moto Helper</string>
+    <string name="title_activity_main_menu" translatable="false">Moto Helper</string>
     <string name="title_activity_registration">Регистрация</string>
     <string name="action_map">Карта</string>
     <string name="action_exit">Выход</string>
     <string name="Mark">Оставить отзыв</string>
     <string name="title_activity_helper_map">Map</string>
-    <string name="addMarker">Добавить метку</string>
+    <string name="addMarker" translatable="false">Добавить метку</string>
     <string name="shortdesc">Краткое описание</string>
     <string name="longdesc">Подробное описание</string>
-    <string name="beginChat">Начать чат</string>
     <string name="yourPhone">Телефон для связи с Вами</string>
     <string name="markerType">Тип метки</string>
     <string name="TMarker_corrupt">Поломка</string>
@@ -49,13 +40,13 @@
     <string name="btnReg">Зарегистрироваться</string>
     <string name="btnCancel">Отмена</string>
     <string name="spec_ip_text">Укажите IP адрес сервера</string>
-    <string name="setipok">Ок</string>
+    <string name="setipok" translatable="false">Ок</string>
     <string name="setipcancel">Отмена</string>
     <string name="StiIpCancel">Отмена</string>
     <string name="vk">Группа Вконтакте</string>
     <string name="remember">Запомнить меня</string>
     <string name="action_refresh">Обновить</string>
-    <string name="action_view_markers">Посмотреть список маркеров</string>
+    <string name="action_view_markers" translatable="false">Посмотреть список маркеров</string>
     <string name="watch_markers">Список маркеров</string>
     <string name="EnterYourName">Введите Ваше имя</string>
     <string name="EnterYourSoName">Введите Вашу Фамилию</string>
@@ -72,17 +63,27 @@
     <string name="PasswordsIncorrect">Проверьте правильность заполнения формы</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="MapSettings">Настройки карты</string>
     <string name="SettingsApp">Настройки приложения</string>
     <string name="MapAndMarkers">Карта и маркеры</string>
     <string name="MarkerSettings">Настройки маркеров</string>
     <string name="showZoomBtn">Показывать кнопки масштаба</string>
-    <string name="showZoomCompass">Показывать компас</string>
+    <string name="showZoomCompass">Показывать компасс</string>
     <string name="showMyLocationBtn">Показывать кнопку \"Мое местоположение\"</string>
     <string name="showCompass">Показывать компасс</string>
     <string name="unableLoadSettings">Не удалось загрузить настройки</string>
     <string name="Submit">Применить</string>
     <string name="Discard">Отмена</string>
     <string name="Sec">сек.</string>
+    <string name="ButtonEnterText">Войти</string>
+    <string name="MarkerWasAdded">Добавлен маркер</string>
+    <string name="MarkerWasAddednearby">Недалеко добавлен новый маркер</string>
+    <string name="SpecifyMarkerTypes">Укажите типы маркеров</string>
+    <string name="action_settings">Настройки</string>
+    <string name="btnRegistrationText">Регистрация</string>
+    <string name="beginChat">Начать чат</string>
+    <string name="btnAllowPushNotifications">Разрешить присылать уведомления</string>
+    <string name="UserInvalid">Неверное имя пользователя или пароль</string>
+    <string name="NoConnection">Невозможно подключиться к серверу</string>
 </resources>

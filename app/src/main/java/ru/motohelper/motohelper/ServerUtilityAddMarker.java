@@ -89,7 +89,7 @@ public class ServerUtilityAddMarker extends AsyncTask<Void, Void, String> {
         dataToSend.add(new BasicNameValuePair("userLogin", m.getUserLogin()));
 
         try {
-            post.setEntity(new UrlEncodedFormEntity(dataToSend, HTTP.UTF_8));
+            post.setEntity(new UrlEncodedFormEntity(dataToSend));
             client.execute(post);
         } catch (Exception e) {
             e.printStackTrace();

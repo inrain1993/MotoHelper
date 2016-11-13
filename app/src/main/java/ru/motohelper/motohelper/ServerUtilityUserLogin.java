@@ -42,7 +42,7 @@ public class ServerUtilityUserLogin extends AsyncTask<Void, Void, User> {
 
 
     @Override
-    protected void onPreExecute(){
+    protected void onPreExecute() {
         processing = new ProgressDialog(ctx);
         processing.setMessage(ctx.getString(R.string.LoggingIn));
         processing.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -71,13 +71,15 @@ public class ServerUtilityUserLogin extends AsyncTask<Void, Void, User> {
             HttpResponse httpResponse = client.execute(post);
             HttpEntity entity = httpResponse.getEntity();
             String result = EntityUtils.toString(entity);
+            if (result.equals("[]")) {
+                loggedUser = new User("invalid", "", "", "", "");
+                return loggedUser;
+            }
             JSONObject jObject = new JSONObject(result);
 
-            if (jObject.length() == 0) {
-                return null;
-            } else {
-                loggedUser = new User(jObject.getString("email"), jObject.getString("password"), jObject.getString("name"), jObject.getString("fam"), jObject.getString("phone"));
-            }
+
+            loggedUser = new User(jObject.getString("email"), jObject.getString("password"), jObject.getString("name"), jObject.getString("fam"), jObject.getString("phone"));
+
         } catch (Exception e) {
             e.printStackTrace();
             loggedUser = new User("noConnection", "", "", "", "");
@@ -85,11 +87,16 @@ public class ServerUtilityUserLogin extends AsyncTask<Void, Void, User> {
         }
         return loggedUser;
     }
+    public User getUser(){
+        return this.loggedUser;
+
+    }
 
     @Override
-    protected void onPostExecute(User result){
-        processing.dismiss();
+    protected void onPostExecute(User result) {
         super.onPostExecute(result);
+        processing.dismiss();
+        this.loggedUser = result;
 
     }
 }
