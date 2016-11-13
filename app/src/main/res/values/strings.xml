@@ -67,7 +67,7 @@
     <string name="MapSettings">Настройки карты</string>
     <string name="SettingsApp">Настройки приложения</string>
     <string name="MapAndMarkers">Карта и маркеры</string>
-    <string name="MarkerSettings">Настройки маркеров</string>
+    <string name="MarkerSettings">Настройки отображения маркеров</string>
     <string name="showZoomBtn">Показывать кнопки масштаба</string>
     <string name="showZoomCompass">Показывать компасс</string>
     <string name="showMyLocationBtn">Показывать кнопку \"Мое местоположение\"</string>
@@ -87,4 +87,5 @@
     <string name="UserInvalid">Неверное имя пользователя или пароль</string>
     <string name="NoConnection">Невозможно подключиться к серверу</string>
     <string name="Actions">Действия</string>
+    <string name="TOnlyMyMarkes">Только мои маркеры</string>
 </resources>

@@ -35,7 +35,7 @@
     <string name="FilterSettings">Filter settings</string>
     <string name="MapAndMarkers">Map and markers</string>
     <string name="MapSettings">Map settings</string>
-    <string name="MarkerSettings">Marker settings</string>
+    <string name="MarkerSettings">Marker display settings</string>
     <string name="PasswordsIncorrect">Check your form please</string>
     <string name="SettingsApp">App settings</string>
     <string name="TMarker_accident">Road Accident</string>
@@ -79,4 +79,5 @@
     <string name="btnAllowPushNotifications">Allow notification</string>
     <string name="UserInvalid">Wrong logim or password</string>
     <string name="NoConnection">Unable to connect server</string>
+    <string name="TOnlyMyMarkes">Только мои маркеры</string>
 </resources>

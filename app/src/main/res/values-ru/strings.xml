@@ -62,7 +62,7 @@
     <string name="MapSettings">Настройки карты</string>
     <string name="MarkerWasAdded">Добавлен маркер</string>
     <string name="MarkerWasAddednearby">Недалеко добавлен новый маркер</string>
-    <string name="MarkerSettings">Настройки маркеров</string>
+    <string name="MarkerSettings">Настройки отображения маркеров маркеров</string>
     <string name="PasswordsIncorrect">Проверьте правильность заполнения формы</string>
     <string name="SettingsApp">Настройки приложения</string>
     <string name="SpecifyMarkerTypes">Укажите типы маркеров</string>
@@ -80,4 +80,5 @@
     <string name="UserInvalid">Неверное имя пользователя или пароль</string>
     <string name="NoConnection">Невозможно подключиться к серверу</string>
     <string name="Actions">Действия</string>
+    <string name="TOnlyMyMarkes">Только мои маркеры</string>
 </resources>

@@ -38,6 +38,18 @@ public class SettingsHolder {
     private boolean showCompassButton;
     private final String getShowCompassButtonSettingName ="SHOW_COMPASS";
 
+    private boolean showOnlyMyMarkers;
+    private final String getShowOnlyMyMarkers = "SHOW_MY_MARKERS";
+
+    private boolean showOnlyAccidents;
+    private final String getShowOnlyAccidents = "SHOW_ACCIDENTS";
+
+    private boolean showOnlyCorrupts;
+    private final String getShowOnlyCorrupts = "SHOW_CORRUPTS";
+
+    private boolean showOnlyLookFriends;
+    private final String getShowOnlyLookFriends = "SHOW_LOOKFRIENDS";
+
     private String refreshTimeOut;
     private final String getRefreshTimeOutSettingName = "REFRESH_TIMEOUT";
 
@@ -48,6 +60,31 @@ public class SettingsHolder {
     public SettingsHolder(Context cntx) {
         this.context = cntx;
         sharedPreferences = context.getSharedPreferences("", Context.MODE_PRIVATE);
+
+    }
+
+    public void setShowOnlyMyMarkers(boolean b){
+        SharedPreferences.Editor ed = sharedPreferences.edit();
+        ed.putBoolean(getShowOnlyMyMarkers,b);
+        ed.commit();
+
+    }
+    public void setShowOnlyAccidents(boolean b){
+        SharedPreferences.Editor ed = sharedPreferences.edit();
+        ed.putBoolean(getShowOnlyAccidents,b);
+        ed.commit();
+
+    }
+    public void setShowOnlyCorrupts(boolean b){
+        SharedPreferences.Editor ed = sharedPreferences.edit();
+        ed.putBoolean(getShowOnlyCorrupts,b);
+        ed.commit();
+
+    }
+    public void setShowOnlyLookFriends(boolean b){
+        SharedPreferences.Editor ed = sharedPreferences.edit();
+        ed.putBoolean(getShowOnlyLookFriends,b);
+        ed.commit();
 
     }
 
@@ -68,6 +105,18 @@ public class SettingsHolder {
 
      return "20";
 
+    }
+    public boolean getShowOnlyMyMarkers(){
+        return sharedPreferences.getBoolean(getShowOnlyMyMarkers, false);
+    }
+    public boolean getShowOnlyAccidents(){
+        return sharedPreferences.getBoolean(getShowOnlyAccidents, false);
+    }
+    public boolean getShowOnlyCorrupts(){
+        return sharedPreferences.getBoolean(getShowOnlyCorrupts, false);
+    }
+    public boolean getShowOnlyLookFriends(){
+        return sharedPreferences.getBoolean(getShowOnlyLookFriends, false);
     }
 
     public boolean getGetShowCompassButtonSetting() {

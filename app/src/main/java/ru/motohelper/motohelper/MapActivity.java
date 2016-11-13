@@ -72,6 +72,8 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
     Button btnDeleteMarker;
     Button btnSubmitMapMarkerSettings;
     Button btnDiscardMapMarkerSettings;
+    Button btnFilterSave;
+    Button btnFilterCancel;
 
     RadioButton markerTypeCorrupt;
     RadioButton markerTypeLookFriends;
@@ -81,6 +83,10 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
     CheckBox checkBoxShowZoomButtons;
     CheckBox checkBoxShowCompass;
     CheckBox checkBoxShowMyLocation;
+    CheckBox checkBoxOnlyMyMarkers;
+    CheckBox checkBoxAccidentMarkers;
+    CheckBox checkBoxLookFriendsMarkers;
+    CheckBox checkBoxCorruptMarkers;
 
     SeekBar seekBarMilliSeconds;
 
@@ -90,6 +96,7 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
     Dialog modalAddMarker;
     Dialog modalOnView;
     Dialog modalMapAndMarkersSetting;
+    Dialog modalFilteringSettings;
 
     LatLng positionToAddMarker;
 
@@ -175,6 +182,29 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
         getMarkersByTimer();
 
+    }
+
+    void onCreateModalFilteringSettings() {
+        modalFilteringSettings = new Dialog(MapActivity.this);
+        modalFilteringSettings.setContentView(R.layout.modal_filtering_settings);
+
+        btnFilterSave = (Button) modalFilteringSettings.findViewById(R.id.button_save_filters);
+        btnFilterCancel = (Button) modalFilteringSettings.findViewById(R.id.button_discard_filters);
+
+        checkBoxOnlyMyMarkers = (CheckBox) modalFilteringSettings.findViewById(R.id.checkBoxOnlyMyMarkers);
+        checkBoxAccidentMarkers = (CheckBox) modalFilteringSettings.findViewById(R.id.checkBoxFilterAccident);
+        checkBoxCorruptMarkers = (CheckBox) modalFilteringSettings.findViewById(R.id.checkBoxFilterCorrupt);
+        checkBoxLookFriendsMarkers = (CheckBox) modalFilteringSettings.findViewById(R.id.checkBoxFilterLookFriends);
+
+        checkBoxOnlyMyMarkers.setChecked(appSettings.getShowOnlyMyMarkers());
+        checkBoxAccidentMarkers.setChecked(appSettings.getShowOnlyAccidents());
+        checkBoxCorruptMarkers.setChecked(appSettings.getShowOnlyCorrupts());
+        checkBoxLookFriendsMarkers.setChecked(appSettings.getShowOnlyLookFriends());
+
+        btnFilterSave.setOnClickListener(this);
+        btnFilterCancel.setOnClickListener(this);
+
+        modalFilteringSettings.show();
     }
 
     void onCreateModalMapAndMarkers() {
@@ -407,6 +437,7 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
                 //fragmentTransaction.replace(R.id.content_main, fragmentSettings);
                 break;
             case R.id.nav_filtering:
+                onCreateModalFilteringSettings();
                 break;
             case R.id.nav_vk:
                 Uri adress = Uri.parse("https://vk.com/motohelper_official");
@@ -471,7 +502,11 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
                 modalOnView.cancel();
                 break;
 
-            // Маркеры и карта
+            /**
+             *
+             * МАРКЕРЫ И КАРТА
+             *
+             */
             case R.id.checkBoxAllowAutoRefresh:
                 setSeekBarRefreshTimeoutVisible(checkBoxAllowAutoRefresh.isChecked());
                 break;
@@ -496,6 +531,22 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
                 break;
             case R.id.button_discard_map_marker_settings:
                 modalMapAndMarkersSetting.dismiss();
+                break;
+            /**
+             *
+             * ФИЛЬТРАЦИЯ
+             *
+             */
+            case R.id.button_save_filters:
+                appSettings.setShowOnlyMyMarkers(checkBoxOnlyMyMarkers.isChecked());
+                appSettings.setShowOnlyAccidents(checkBoxAccidentMarkers.isChecked());
+                appSettings.setShowOnlyCorrupts(checkBoxCorruptMarkers.isChecked());
+                appSettings.setShowOnlyLookFriends(checkBoxLookFriendsMarkers.isChecked());
+                refreshMarkers(true);
+                modalFilteringSettings.dismiss();
+                break;
+            case R.id.button_discard_filters:
+                modalFilteringSettings.dismiss();
                 break;
         }
 
@@ -573,14 +624,90 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
     }
 
     private void redrawMarkers(ArrayList<MyMarker> mMarkers) {
-        try {
-            for (int i = 0; i < mMarkers.size(); i++) {
-                mMarkers.get(i).addMarker(mMap);
-                markersCollection.put(mMarkers.get(i).getMarker().getId(), mMarkers.get(i));
+        /**
+         *
+         * Если выбран флаг только своих маркеров
+         *
+         */
+
+        if (appSettings.getShowOnlyMyMarkers()) {
+            /**
+             *  ДТП
+             */
+            if (appSettings.getShowOnlyAccidents()) {
+                for (int i = 0; i < mMarkers.size(); i++) {
+                    if (mMarkers.get(i).getType() == 1 && mMarkers.get(i).getUserLogin().equals(currentUser.getLogin())) {
+                        mMarkers.get(i).addMarker(mMap);
+                        markersCollection.put(mMarkers.get(i).getMarker().getId(), mMarkers.get(i));
+                    }
+                }
+
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+            /**
+             * Ищу попутчиков
+             */
+            if(appSettings.getShowOnlyLookFriends()){
+                for (int i = 0; i < mMarkers.size(); i++) {
+                    if (mMarkers.get(i).getType() == 3 && mMarkers.get(i).getUserLogin().equals(currentUser.getLogin())) {
+                        mMarkers.get(i).addMarker(mMap);
+                        markersCollection.put(mMarkers.get(i).getMarker().getId(), mMarkers.get(i));
+                    }
+                }
+
+            }
+            if(appSettings.getShowOnlyCorrupts()){
+                for (int i = 0; i < mMarkers.size(); i++) {
+                    if (mMarkers.get(i).getType() == 2 && mMarkers.get(i).getUserLogin().equals(currentUser.getLogin())) {
+                        mMarkers.get(i).addMarker(mMap);
+                        markersCollection.put(mMarkers.get(i).getMarker().getId(), mMarkers.get(i));
+                    }
+                }
+
+            }
+
         }
+        /**
+         *
+         * Если НЕ выбран флаг только своих маркеров
+         *
+         */
+        if (!appSettings.getShowOnlyMyMarkers()) {
+            /**
+             *  ДТП
+             */
+            if (appSettings.getShowOnlyAccidents()) {
+                for (int i = 0; i < mMarkers.size(); i++) {
+                    if (mMarkers.get(i).getType() == 1) {
+                        mMarkers.get(i).addMarker(mMap);
+                        markersCollection.put(mMarkers.get(i).getMarker().getId(), mMarkers.get(i));
+                    }
+                }
+
+            }
+            /**
+             * Ищу попутчиков
+             */
+            if(appSettings.getShowOnlyLookFriends()){
+                for (int i = 0; i < mMarkers.size(); i++) {
+                    if (mMarkers.get(i).getType() == 3) {
+                        mMarkers.get(i).addMarker(mMap);
+                        markersCollection.put(mMarkers.get(i).getMarker().getId(), mMarkers.get(i));
+                    }
+                }
+
+            }
+            if(appSettings.getShowOnlyCorrupts()){
+                for (int i = 0; i < mMarkers.size(); i++) {
+                    if (mMarkers.get(i).getType() == 2 ) {
+                        mMarkers.get(i).addMarker(mMap);
+                        markersCollection.put(mMarkers.get(i).getMarker().getId(), mMarkers.get(i));
+                    }
+                }
+
+            }
+
+        }
+
     }
 
     private void refreshMarkers(boolean doDialog) {
@@ -588,6 +715,7 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
         getMarkersAuto.setDoDialog(doDialog);
         getMarkersAuto.setOnRefreshed(MapActivity.this);
         getMarkersAuto.execute();
+        //После выполнения - идем на колбэк onRefreshCompleted()
     }
 
     private void openQuitDialog() {

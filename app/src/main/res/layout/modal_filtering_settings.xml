@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    android:padding="10sp">
+
+    <TextView
+        android:id="@+id/TextSpecMarkerTypes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/MarkerSettings"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TextSpecMarkerTypes"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <CheckBox
+            android:textSize="20sp"
+            android:id="@+id/checkBoxOnlyMyMarkers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/TOnlyMyMarkes" />
+
+        <CheckBox
+            android:id="@+id/checkBoxFilterAccident"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/TMarker_accident" />
+
+        <CheckBox
+            android:textSize="20sp"
+            android:id="@+id/checkBoxFilterCorrupt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/TMarker_corrupt" />
+
+        <CheckBox
+            android:textSize="20sp"
+            android:id="@+id/checkBoxFilterLookFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TMarker_lookfriends" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout1"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/button_save_filters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Save"
+            android:background="@drawable/rounded_light_button"
+            android:layout_margin="10sp"/>
+
+        <Button
+            android:id="@+id/button_discard_filters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Cancel"
+            android:background="@drawable/rounded_light_button"
+            android:layout_margin="10sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
