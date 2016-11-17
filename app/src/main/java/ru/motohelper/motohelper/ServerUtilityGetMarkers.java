@@ -58,7 +58,7 @@ public class ServerUtilityGetMarkers extends AsyncTask<Void, Void, ArrayList<MyM
     protected void onPreExecute() {
         if (doDialog) {
             processing = new ProgressDialog(c);
-            processing.setMessage("Регистрация пользователя в системе");
+            processing.setMessage(c.getResources().getString(R.string.ApplyingSettings));
             processing.setProgressStyle(ProgressDialog.STYLE_SPINNER);
             processing.setIndeterminate(true);
             processing.setCancelable(false);

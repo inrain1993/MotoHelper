@@ -88,4 +88,5 @@
     <string name="NoConnection">Невозможно подключиться к серверу</string>
     <string name="Actions">Действия</string>
     <string name="TOnlyMyMarkes">Только мои маркеры</string>
+    <string name="ApplyingSettings">Применение настроек</string>
 </resources>

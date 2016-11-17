@@ -25,7 +25,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.concurrent.ExecutionException;
 
-public class StartActivity extends AppCompatActivity implements View.OnClickListener {
+public class StartActivity extends AppCompatActivity implements View.OnClickListener, ServerUtilityUserLogin.OnRefreshed {
     Button btnLogin;
     Button btnRegister;
     Button setIpOk;
@@ -138,7 +138,6 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     }
 
     /**
-     *
      * Обработчики нажатия на кнопки активностей
      */
 
@@ -157,31 +156,12 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                     appSettings.setUserNamePassword(email.getText().toString(), password.getText().toString());
                 }
                 userLogin = new ServerUtilityUserLogin(StartActivity.this, email.getText().toString(), password.getText().toString());
+                userLogin.setOnRefreshed(StartActivity.this);
 
                 try {
-                    currentUser =userLogin.execute().get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
+                    userLogin.execute();
+                } catch (Exception e) {
                 }
-                appSettings.setCurrentUser(currentUser);
-                    Toast.makeText(this, currentUser.getFirstName(), Toast.LENGTH_SHORT).show();
-
-
-                //по условию
-
-                if (currentUser.getLogin().equals("invalid")) {
-                    Toast.makeText(StartActivity.this, getResources().getText(R.string.UserInvalid), Toast.LENGTH_SHORT).show();
-                    break;
-                }
-                if (currentUser.getLogin().equals("noConnection")) {
-                    Toast.makeText(StartActivity.this, getResources().getText(R.string.NoConnection), Toast.LENGTH_SHORT).show();
-                    break;
-                }
-                Intent mapIntent = new Intent(this, MapActivity.class);
-                startActivity(mapIntent);
-
 
                 break;
             case R.id.btnGoRegistrate:
@@ -230,5 +210,24 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show();
 
         }
+    }
+
+    @Override
+    public void onRefreshCompleted() throws ExecutionException, InterruptedException {
+        currentUser = userLogin.get();
+        appSettings.setCurrentUser(currentUser);
+        Toast.makeText(this, currentUser.getFirstName(), Toast.LENGTH_SHORT).show();
+
+        if (currentUser.getLogin().equals("invalid")) {
+            Toast.makeText(StartActivity.this, getResources().getText(R.string.UserInvalid), Toast.LENGTH_SHORT).show();
+        }
+        if (currentUser.getLogin().equals("noConnection")) {
+            Toast.makeText(StartActivity.this, getResources().getText(R.string.NoConnection), Toast.LENGTH_SHORT).show();
+        }
+        if(currentUser.getLogin().equals(email.getText().toString())) {
+            Intent mapIntent = new Intent(this, MapActivity.class);
+            startActivity(mapIntent);
+        }
+
     }
 }

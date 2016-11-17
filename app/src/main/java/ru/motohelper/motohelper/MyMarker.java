@@ -1,6 +1,11 @@
 package ru.motohelper.motohelper;
 
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -23,6 +28,8 @@ public class MyMarker {
     private String userName;
     private String userSecondName;
     private String phone;
+
+    private int bitmap;
 
     private boolean visibility;
     /**
@@ -145,6 +152,10 @@ public class MyMarker {
         return type;
     }
 
+    public int getBitmap(){
+        return this.bitmap;
+    }
+
     public void addMarker(GoogleMap map) {
         markerOptions.visible(visibility);
         marker = map.addMarker(markerOptions);
@@ -155,15 +166,19 @@ public class MyMarker {
             //ДТП
             case 1:
                 markerOptions = new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.accident)).position(position);
+                this.bitmap = R.drawable.accident;
                 break;
             case 2:
                 markerOptions = new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.mrkr3)).position(position);
+                this.bitmap=R.drawable.mrkr3;
                 break;
             case 3:
                 markerOptions = new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.lookfriends)).position(position);
+                this.bitmap = R.drawable.lookfriends;
                 break;
         }
     }
+
 
     public MarkerOptions getMarkerOptions() {
         return markerOptions;

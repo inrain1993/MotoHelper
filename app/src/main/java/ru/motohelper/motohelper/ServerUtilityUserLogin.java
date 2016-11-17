@@ -20,6 +20,7 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by Michael on 05.11.2016.
@@ -32,12 +33,20 @@ public class ServerUtilityUserLogin extends AsyncTask<Void, Void, User> {
     SettingsHolder settingsHolder;
     User loggedUser;
     ProgressDialog processing;
+    private OnRefreshed listener;
 
     public ServerUtilityUserLogin(Context context, String login, String password) {
         this.ctx = context;
         this.login = login;
         this.password = password;
         settingsHolder = new SettingsHolder(ctx);
+    }
+    public interface OnRefreshed {
+        void onRefreshCompleted() throws ExecutionException, InterruptedException;
+    }
+
+    public void setOnRefreshed(OnRefreshed listener) {
+        this.listener = listener;
     }
 
 
@@ -97,6 +106,11 @@ public class ServerUtilityUserLogin extends AsyncTask<Void, Void, User> {
         super.onPostExecute(result);
         processing.dismiss();
         this.loggedUser = result;
+        if (listener != null)
+            try {
+                listener.onRefreshCompleted();
+            } catch (Exception e) {
+            }
 
     }
 }

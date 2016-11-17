@@ -3,12 +3,16 @@ package ru.motohelper.motohelper;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -22,6 +26,10 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.CheckBox;
 import android.widget.SeekBar;
+
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -102,6 +110,8 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
     SettingsHolder appSettings;
 
+    LocationManager locationManager;
+
 
     MyMarker selectedMarker;
 
@@ -113,6 +123,9 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
     Timer timer;
     TimerTask doAsynchronousTask;
+    ArrayList<MyMarker> oldState;
+    Location currentLocation;
+    Location lastKnownLocation;
 
 
     @Override
@@ -132,8 +145,81 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
             markerRefreshTimeout = 20 * 1000;
         }
 
+        /**
+         *
+         * Слушатель GPS
+         *
+         */
+        LocationListener listener = new LocationListener() {
+            public void onLocationChanged(Location argLocation) {
+                currentLocation = argLocation;
+            }
+
+            @Override
+            public void onProviderDisabled(String provider) {
+                currentLocation = null;
+            }
+
+            @Override
+            public void onProviderEnabled(String provider) {
+
+            }
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+            }
+        };
+
+        /**
+         *
+         * Слушатель интернет
+         *
+         */
+
+        LocationListener listenerInternet = new LocationListener() {
+            public void onLocationChanged(Location argLocation) {
+                currentLocation = argLocation;
+            }
+
+            @Override
+            public void onProviderDisabled(String provider) {
+                currentLocation = null;
+            }
+
+            @Override
+            public void onProviderEnabled(String provider) {
+
+            }
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+            }
+        };
+
+
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0,
+                0, listener);
+        locationManager.requestLocationUpdates(
+                LocationManager.NETWORK_PROVIDER, 0, 0, listenerInternet);
+        lastKnownLocation = locationManager
+                .getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
 
     }
+
 
     private void initializeMap() {
         mapFragment = (MapFragment) getFragmentManager()
@@ -618,9 +704,21 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
     public void onRefreshCompleted() throws ExecutionException, InterruptedException {
         ArrayList<MyMarker> mMarkers = getMarkersAuto.getMarkers();
         markersCollection.clear();
+
+        if (!(currentLocation == null)) {
+
+            NotifManager notif = new NotifManager(MapActivity.this);
+            notif.setCurrentLocation(currentLocation);
+            notif.setCurrentUser(currentUser);
+            notif.setRadius(5000);
+            notif.notify(oldState, mMarkers);
+        }
+
+
         mMap.clear();
         if (mMarkers.size() > 0)
             redrawMarkers(mMarkers);
+        oldState = mMarkers;
     }
 
     private void redrawMarkers(ArrayList<MyMarker> mMarkers) {
@@ -646,7 +744,7 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
             /**
              * Ищу попутчиков
              */
-            if(appSettings.getShowOnlyLookFriends()){
+            if (appSettings.getShowOnlyLookFriends()) {
                 for (int i = 0; i < mMarkers.size(); i++) {
                     if (mMarkers.get(i).getType() == 3 && mMarkers.get(i).getUserLogin().equals(currentUser.getLogin())) {
                         mMarkers.get(i).addMarker(mMap);
@@ -655,7 +753,7 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
                 }
 
             }
-            if(appSettings.getShowOnlyCorrupts()){
+            if (appSettings.getShowOnlyCorrupts()) {
                 for (int i = 0; i < mMarkers.size(); i++) {
                     if (mMarkers.get(i).getType() == 2 && mMarkers.get(i).getUserLogin().equals(currentUser.getLogin())) {
                         mMarkers.get(i).addMarker(mMap);
@@ -687,7 +785,7 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
             /**
              * Ищу попутчиков
              */
-            if(appSettings.getShowOnlyLookFriends()){
+            if (appSettings.getShowOnlyLookFriends()) {
                 for (int i = 0; i < mMarkers.size(); i++) {
                     if (mMarkers.get(i).getType() == 3) {
                         mMarkers.get(i).addMarker(mMap);
@@ -696,9 +794,9 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
                 }
 
             }
-            if(appSettings.getShowOnlyCorrupts()){
+            if (appSettings.getShowOnlyCorrupts()) {
                 for (int i = 0; i < mMarkers.size(); i++) {
-                    if (mMarkers.get(i).getType() == 2 ) {
+                    if (mMarkers.get(i).getType() == 2) {
                         mMarkers.get(i).addMarker(mMap);
                         markersCollection.put(mMarkers.get(i).getMarker().getId(), mMarkers.get(i));
                     }

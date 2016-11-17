@@ -51,6 +51,7 @@ public class ServerUtilityAddMarker extends AsyncTask<Void, Void, String> {
         processing.setIndeterminate(true);
         processing.setCancelable(false);
         processing.show();
+
     }
 
     @Override
@@ -89,7 +90,7 @@ public class ServerUtilityAddMarker extends AsyncTask<Void, Void, String> {
         dataToSend.add(new BasicNameValuePair("userLogin", m.getUserLogin()));
 
         try {
-            post.setEntity(new UrlEncodedFormEntity(dataToSend));
+            post.setEntity(new UrlEncodedFormEntity(dataToSend,HTTP.UTF_8));
             client.execute(post);
         } catch (Exception e) {
             e.printStackTrace();
