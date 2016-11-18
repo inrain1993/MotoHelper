@@ -82,4 +82,11 @@
     <string name="Actions">Действия</string>
     <string name="TOnlyMyMarkes">Только мои маркеры</string>
     <string name="ApplyingSettings">Применение настроек</string>
+    <string name="CheckPasswordAndLogin">Введите логин и пароль!</string>
+    <string name="CheckLogin">Введите логин</string>
+    <string name="CheckPassword">Введите пароль</string>
+    <string name="CheckRegData">Проверьте правильность введенной информации</string>
+    <string name="chooseMarkerType">Выберите тип маркера</string>
+    <string name="ShortDescriptionRequired">Необходимо заполнить хотябы краткое описание и телефон</string>
+    <string name="OwnerOfMarkerIs">Маркер поставил пользователь -</string>
 </resources>

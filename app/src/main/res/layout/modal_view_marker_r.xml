@@ -46,15 +46,21 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="15sp" />
 
-            <EditText
-                android:id="@+id/longDescView"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="12dp"
-                android:background="@color/colorWhite"
-                android:padding="5dp"
-                android:textSize="15sp" />
+                android:layout_height="80dp">
+
+                <EditText
+                    android:id="@+id/longDescView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="12dp"
+                    android:background="@color/colorWhite"
+                    android:lines="8"
+                    android:padding="5dp"
+                    android:textSize="15sp" />
+            </ScrollView>
 
             <TextView
                 android:id="@+id/textView4"
@@ -92,65 +98,54 @@
                 android:layout_width="54dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/ic_vector_delete"
-                android:layout_weight="0.48" />
+                android:layout_weight="0.48"
+                android:background="@drawable/ic_vector_delete" />
 
             <Button
                 android:id="@+id/buttonDial"
                 android:layout_width="54dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/ic_vector_phone"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_vector_phone" />
 
             <Button
                 android:id="@+id/buttonSMS"
                 android:layout_width="54dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:scaleY="1.1"
-                android:background="@drawable/ic_vector_sms"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/ic_vector_sms"
+                android:scaleY="1.1" />
         </RelativeLayout>
+
 
         <RelativeLayout
             android:id="@+id/linearLayout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp">
 
-            <RadioGroup
+            <TextView
+                android:id="@+id/textView_markerOwner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="123"
+                android:textColor="@color/colorBlack"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:id = "@+id/imageView_markerImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
+                android:layout_below="@+id/textView_markerOwner"
+                android:layout_marginTop="15dp"
+                />
 
-                <RadioButton
-                    android:id="@+id/corrView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/TMarker_corrupt"
-                    android:textSize="15sp" />
 
-                <RadioButton
-                    android:id="@+id/lookfView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/TMarker_lookfriends"
-                    android:textSize="15sp" />
-
-                <RadioButton
-                    android:id="@+id/accidentView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/TMarker_accident"
-                    android:textSize="15sp" />
-
-            </RadioGroup>
         </RelativeLayout>
 
     </RelativeLayout>

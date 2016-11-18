@@ -15,5 +15,7 @@
     <color name="colorAccent">#04C38A</color>
     <color name="colorWhite">#ffffff</color>
 
+    <color name="colorBlack">#000</color>
+
 
 </resources>

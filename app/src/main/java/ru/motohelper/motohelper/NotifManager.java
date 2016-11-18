@@ -45,32 +45,34 @@ public class NotifManager {
         currentLocation = c;
     }
 
-    public void setCurrentUser(User u){
+    public void setCurrentUser(User u) {
         currentUser = u;
     }
 
-    public void notify(ArrayList<MyMarker> currentMarkers, ArrayList<MyMarker> serverMarkers){
-        ArrayList<MyMarker> mArray = getMarkersToNotify(currentMarkers,serverMarkers);
+    public void notify(ArrayList<MyMarker> currentMarkers, ArrayList<MyMarker> serverMarkers) {
+        if (currentMarkers != null) {
+            ArrayList<MyMarker> mArray = getMarkersToNotify(currentMarkers, serverMarkers);
 
-        for (int i = 0; i < mArray.size(); i++) {
-            Location l = new Location("location");
-            l.setAltitude(mArray.get(i).getPosition().latitude);
-            l.setLongitude(mArray.get(i).getPosition().longitude);
-            try {
-                double dist = calculateDestination(
-                        mArray.get(i).getPosition().latitude,
-                        mArray.get(i).getPosition().longitude,
-                        currentLocation.getLatitude(), currentLocation.getLongitude());
-                if (dist <= radius * 1000 && !mArray.get(i).getUserLogin().equals(currentUser.getLogin())) {
-                    sendNotification("Пользователь "
-                            + mArray.get(i).getUserName()
-                            + " добавил маркер недалеко от вас.", mArray
-                            .get(i).getBitmap());
+            for (int i = 0; i < mArray.size(); i++) {
+                Location l = new Location("location");
+                l.setAltitude(mArray.get(i).getPosition().latitude);
+                l.setLongitude(mArray.get(i).getPosition().longitude);
+                try {
+                    double dist = calculateDestination(
+                            mArray.get(i).getPosition().latitude,
+                            mArray.get(i).getPosition().longitude,
+                            currentLocation.getLatitude(), currentLocation.getLongitude());
+                    if (dist <= radius * 1000 && !mArray.get(i).getUserLogin().equals(currentUser.getLogin())) {
+                        sendNotification("Пользователь "
+                                + mArray.get(i).getUserName()
+                                + " добавил маркер недалеко от вас.", mArray
+                                .get(i).getBitmap());
+                    }
+                } catch (Exception ex) {
+                    ex.printStackTrace();
                 }
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
 
+            }
         }
 
 
@@ -87,7 +89,7 @@ public class NotifManager {
         builder.setContentIntent(contentIntent)
                 .setSmallIcon(R.drawable.ic_launcher)
                 // большая картинка
-                .setLargeIcon(BitmapFactory.decodeResource(res,icon))
+                .setLargeIcon(BitmapFactory.decodeResource(res, icon))
                 // .setTicker(res.getString(R.string.warning)) // текст в строке
                 // состояния
                 .setTicker(res.getString(R.string.MarkerWasAddednearby))
@@ -109,16 +111,22 @@ public class NotifManager {
 
 
     private ArrayList<MyMarker> getMarkersToNotify(ArrayList<MyMarker> currentMarkers, ArrayList<MyMarker> serverMarkers) {
-        this.currentState = new HashSet<MyMarker>(currentMarkers);
-        this.newState = new HashSet<MyMarker>(serverMarkers);
+        boolean found = false;
+        ArrayList<MyMarker> returnMarkers = new ArrayList<MyMarker>();
+        for (int i = 0; i < serverMarkers.size(); i++) {
+            for (int j = 0; j < currentMarkers.size(); j++) {
+                if (serverMarkers.get(i).getServerID().equals(currentMarkers.get(j).getServerID())) {
+                    found = true;
+                    continue;
+                }
+            }
+            if (!found) {
+                returnMarkers.add(serverMarkers.get(i));
 
-        Iterator it = currentState.iterator();
-
-        while (it.hasNext()) {
-            newState.remove(it.next());
+            }
+            found = false;
         }
-
-        return new ArrayList<MyMarker>(newState);
+        return returnMarkers;
     }
 
 

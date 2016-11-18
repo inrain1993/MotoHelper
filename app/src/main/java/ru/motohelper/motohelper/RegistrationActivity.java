@@ -53,13 +53,48 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
 
         switch (view.getId()) {
             case R.id.btn_RegistrateUser:
-                if(userPassword.getText().toString().equals(userPasswordConfirm.getText().toString()) || userName.getText().toString() == "" || userSecondName.getText().toString() == "" || userLogin.getText().toString()=="" || userPhone.getText().toString() == "") {
+                String uName = userName.getText().toString();
+                String uSecondName = userSecondName.getText().toString();
+                String uLogin = userLogin.getText().toString();
+                String uPassword = userPassword.getText().toString();
+                String uPasswordConfirm = userPasswordConfirm.getText().toString();
+                String uPhone = userPhone.getText().toString();
+
+                if (uName.equals("") || uSecondName.equals("") || uLogin.equals("") || uPassword.equals("") || uPasswordConfirm.equals("")) {
+                    Toast.makeText(RegistrationActivity.this, getResources().getText(R.string.CheckRegData), Toast.LENGTH_SHORT).show();
+                    break;
+                }
+
+
+                if (!uPassword.equals(uPasswordConfirm)) {
+                    Toast.makeText(RegistrationActivity.this, getResources().getText(R.string.CheckPasswordAndConfirm), Toast.LENGTH_SHORT).show();
+                    break;
+                }
+
+
+                if (uLogin.length() < 4) {
+                    Toast.makeText(RegistrationActivity.this, getResources().getText(R.string.LoginTooShort), Toast.LENGTH_SHORT).show();
+                    break;
+                }
+
+                if (uPassword.length() < 4) {
+                    Toast.makeText(RegistrationActivity.this, getResources().getText(R.string.PassTooShort), Toast.LENGTH_SHORT).show();
+                    break;
+                }
+
+                if (uPhone.length() == 0) {
+                    Toast.makeText(this, getResources().getText(R.string.userPhoneRequired), Toast.LENGTH_LONG).show();
+                    break;
+                }
+
+
+                if (userPassword.getText().toString().equals(userPasswordConfirm.getText().toString()) || userName.getText().toString() == "" || userSecondName.getText().toString() == "" || userLogin.getText().toString() == "" || userPhone.getText().toString() == "") {
                     userToRegistrate = new User(userLogin.getText().toString(), userPassword.getText().toString(), userName.getText().toString(), userSecondName.getText().toString(), userPhone.getText().toString());
                     registrator = new ServerUtilityUserRegistration(this, REGISTER_USER, userToRegistrate);
                     registrator.execute();
                     super.onBackPressed();
-                }else{
-                    Toast.makeText(this,getResources().getText(R.string.PasswordsIncorrect), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, getResources().getText(R.string.PasswordsIncorrect), Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.btn_CancelRegistrate:

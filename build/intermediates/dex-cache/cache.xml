@@ -205,7 +205,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="6ecd89ba320f43f5605303967e1ce8cc46048901">
+        sha1="7dcc96a1eab83a02a0fda5cb2662129e4edd1f27">
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_50aeda09ed5be02da891841974dca26901d4df26\classes.dex" />
     </item>
     <item
@@ -340,7 +340,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="88173da2675e9519480df39e77640095dc036b01">
+        sha1="41fdf24647ed119727469beff6f44b409e05c858">
         <dex dex="C:\Users\Michael\AndroidStudioProjects\MotoHelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_f86ce9d64e949015924c84ab8b9d2426c12804ba\classes.dex" />
     </item>
     <item

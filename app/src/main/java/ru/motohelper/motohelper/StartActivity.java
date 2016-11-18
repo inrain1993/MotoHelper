@@ -152,15 +152,24 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
             case R.id.setipcancel:
                 modal.cancel();
             case R.id.btLogin:
-                if (remember.isChecked()) {
-                    appSettings.setUserNamePassword(email.getText().toString(), password.getText().toString());
-                }
-                userLogin = new ServerUtilityUserLogin(StartActivity.this, email.getText().toString(), password.getText().toString());
-                userLogin.setOnRefreshed(StartActivity.this);
 
-                try {
-                    userLogin.execute();
-                } catch (Exception e) {
+                String login = email.getText().toString();
+                String pass = password.getText().toString();
+
+                if (login.equals("") || pass.equals("")) {
+                    Toast.makeText(StartActivity.this, getResources().getText(R.string.CheckPasswordAndLogin), Toast.LENGTH_SHORT).show();
+                } else {
+
+                    if (remember.isChecked()) {
+                        appSettings.setUserNamePassword(email.getText().toString(), password.getText().toString());
+                    }
+                    userLogin = new ServerUtilityUserLogin(StartActivity.this, email.getText().toString(), password.getText().toString());
+                    userLogin.setOnRefreshed(StartActivity.this);
+
+                    try {
+                        userLogin.execute();
+                    } catch (Exception e) {
+                    }
                 }
 
                 break;
@@ -224,7 +233,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
         if (currentUser.getLogin().equals("noConnection")) {
             Toast.makeText(StartActivity.this, getResources().getText(R.string.NoConnection), Toast.LENGTH_SHORT).show();
         }
-        if(currentUser.getLogin().equals(email.getText().toString())) {
+        if (currentUser.getLogin().equals(email.getText().toString())) {
             Intent mapIntent = new Intent(this, MapActivity.class);
             startActivity(mapIntent);
         }

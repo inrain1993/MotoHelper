@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.CheckBox;
@@ -30,6 +31,7 @@ import android.widget.SeekBar;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -59,21 +61,20 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
     Map<String, MyMarker> markersCollection = new HashMap<String, MyMarker>();
     EditText markerShortDescription;
     EditText markerLongDescription;
-    EditText markerUserPhone;
 
     FragmentSettings fragmentSettings;
 
     TextView navUserLogin;
     TextView navUserFamNam;
     TextView textViewMilSecondsDisplay;
+    TextView markerOwner;
 
     EditText shortDesc;
     EditText longDesc;
     EditText phone;
 
-    RadioButton rbuttonCorrupt;
-    RadioButton rbuttonLookF;
-    RadioButton rbuttonAccident;
+
+    ImageView markerImage;
 
     Button btnDial;
     Button btnSMS;
@@ -368,7 +369,6 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
 
         markerShortDescription = (EditText) modalAddMarker.findViewById(R.id.shortDesc);
         markerLongDescription = (EditText) modalAddMarker.findViewById(R.id.longDesc);
-        markerUserPhone = (EditText) modalAddMarker.findViewById(R.id.phone);
 
         buttonCreateMarker = (Button) modalAddMarker.findViewById(R.id.buttonAddMarker);
         buttonCancelCreateMarker = (Button) modalAddMarker.findViewById(R.id.buttonAddMarkerCancel);
@@ -398,9 +398,9 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
         longDesc = (EditText) modalOnView.findViewById(R.id.longDescView);
         phone = (EditText) modalOnView.findViewById(R.id.phoneView);
 
-        rbuttonCorrupt = (RadioButton) modalOnView.findViewById(R.id.corrView);
-        rbuttonLookF = (RadioButton) modalOnView.findViewById(R.id.lookfView);
-        rbuttonAccident = (RadioButton) modalOnView.findViewById(R.id.accidentView);
+        markerOwner = (TextView) modalOnView.findViewById(R.id.textView_markerOwner);
+
+        markerImage = (ImageView) modalOnView.findViewById(R.id.imageView_markerImage);
 
         btnDial = (Button) modalOnView.findViewById(R.id.buttonDial);
         btnSMS = (Button) modalOnView.findViewById(R.id.buttonSMS);
@@ -409,12 +409,16 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
         String markerUserLogin = markersCollection.get(marker.getId()).getUserLogin();
         String currentUserLogin = currentUser.getLogin();
 
+
         selectedMarker = markersCollection.get(marker.getId());
+        String markerOwnerName = getResources().getString(R.string.OwnerOfMarkerIs)+" "+ selectedMarker.getUserName() +" "+ selectedMarker.getUserSecondName();
+        markerOwner.setText(markerOwnerName);
         if (markerUserLogin.equals(currentUserLogin)) {
             btnDeleteMarker.setVisibility(View.VISIBLE);
         } else {
             btnDeleteMarker.setVisibility(View.INVISIBLE);
         }
+
 
         btnDial.setOnClickListener(this);
         btnSMS.setOnClickListener(this);
@@ -423,9 +427,6 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
         shortDesc.setEnabled(false);
         longDesc.setEnabled(false);
         phone.setEnabled(false);
-        rbuttonLookF.setEnabled(false);
-        rbuttonCorrupt.setEnabled(false);
-        rbuttonAccident.setEnabled(false);
 
         // наполнение данными
         try {
@@ -433,17 +434,8 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
             shortDesc.setText(markersCollection.get(marker.getId()).getShortDescription());
             longDesc.setText(markersCollection.get(marker.getId()).getDescription());
             phone.setText(markersCollection.get(marker.getId()).getPhone());
-            switch (markersCollection.get(marker.getId()).getType()) {
-                case 1:
-                    rbuttonAccident.setChecked(true);
-                    break;
-                case 2:
-                    rbuttonCorrupt.setChecked(true);
-                    break;
-                case 3:
-                    rbuttonLookF.setChecked(true);
-                    break;
-            }
+            markerImage.setBackgroundResource(selectedMarker.getBitmap());
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -560,13 +552,25 @@ public class MapActivity extends AppCompatActivity implements NavigationView.OnN
                 modalAddMarker.dismiss();
                 break;
             case R.id.buttonAddMarker:
+
+                if(!markerTypeAccident.isChecked() && !markerTypeCorrupt.isChecked() && !markerTypeLookFriends.isChecked())
+                {
+                    Toast.makeText(MapActivity.this,getResources().getText(R.string.chooseMarkerType),Toast.LENGTH_SHORT).show();
+                    break;
+                }
+
+                if(markerShortDescription.getText().toString().length()==0){
+                    Toast.makeText(MapActivity.this,getResources().getText(R.string.ShortDescriptionRequired),Toast.LENGTH_SHORT).show();
+                    break;
+                }
+
                 //тип и инициализация
                 int type = 1;
                 if (markerTypeAccident.isChecked()) type = 1;
                 if (markerTypeCorrupt.isChecked()) type = 2;
                 if (markerTypeLookFriends.isChecked()) type = 3;
 
-                MyMarker m = new MyMarker(positionToAddMarker, markerShortDescription.getText().toString(), markerLongDescription.getText().toString(), markerUserPhone.getText().toString(), type, true, currentUser.getLogin());
+                MyMarker m = new MyMarker(positionToAddMarker, markerShortDescription.getText().toString(), markerLongDescription.getText().toString(), currentUser.getPhone(), type, true, currentUser.getLogin());
                 ServerUtilityAddMarker addMarker = new ServerUtilityAddMarker(this, m, currentUser);
                 addMarker.execute();
                 modalAddMarker.dismiss();
